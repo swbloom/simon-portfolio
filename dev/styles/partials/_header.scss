@@ -1,7 +1,14 @@
-$heroGradient: linear-gradient(rgba(11, 44, 55, 0.93), rgba(11, 44, 55, 0.93));
 
 .hero {
   padding-top: 55px;
+}
+
+.hero h1 {
+  color: #FFF;
+  padding: 18px 0px;
+}
+
+.hero-nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +17,25 @@ $heroGradient: linear-gradient(rgba(11, 44, 55, 0.93), rgba(11, 44, 55, 0.93));
 .hero-container--internal {
   height: 534px;
 }
+
 .hero-container--about {
-  background: #{$heroGradient}, url('../images/pngs/about-hero-bg.png');
+  background: #{$bgGradient}, url('../images/pngs/about-hero-bg.png');
   @include image-2x("../images/pngs/about-hero-bg-2x.png", 1420, 811);
+  background-size: cover;
+}
+
+.hero-text-wrapper {
+  padding-top: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-subtext {
+  font-family: $secondary-font;
+  color: #d9c19b;
+  font-size: 1.666rem;
+  font-style: italic;
+  line-height: 3.1;
+  letter-spacing: 0.4px;
 }

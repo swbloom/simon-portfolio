@@ -7,13 +7,23 @@ head
 body
   header.hero-container.hero-container--internal.hero-container--about
     .hero.wrapper
-      .logo
-        img(src='/public/images/svgs/swb-badge-blog.svg')
-        //- Logo here
-      nav
-        ul
-          li Home
-          li About
-          li Work
-          li Contact
-          li Blog
+      .hero-nav-wrapper
+        .logo
+          img(src='/public/images/svgs/swb-badge-blog.svg')
+          //- Logo here
+        nav
+          include ./includes/nav.pug
+      .hero-text-wrapper
+        span.hero-subtext Hello there! 
+        h1 Welcome
+        span.hero-subtext Thanks for stopping by.
+  main
+    .wrapper
+      .headline-wrapper--about
+        h3 I'm Simon, & I'm happy you've found my little slice of the Internet.
+      p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt saepe, ipsam eos illo quisquam laborum cumque a ad esse, placeat, culpa officia aut laboriosam, excepturi doloribus necessitatibus minima alias modi?
+      
+      
+  include ./includes/footer.pug
+
+        

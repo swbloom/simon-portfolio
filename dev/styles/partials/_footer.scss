@@ -1,0 +1,14 @@
+footer {
+  background: #{$bgGradient}, url('../images/pngs/footer-bg.png');
+  @include image-2x("../images/pngs/footer-2x.png", 1420, 811);
+  background-size: cover;
+}
+
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 682px;
+}
