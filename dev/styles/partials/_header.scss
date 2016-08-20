@@ -1,0 +1,16 @@
+$heroGradient: linear-gradient(rgba(11, 44, 55, 0.93), rgba(11, 44, 55, 0.93));
+
+.hero {
+  padding-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-container--internal {
+  height: 534px;
+}
+.hero-container--about {
+  background: #{$heroGradient}, url('../images/pngs/about-hero-bg.png');
+  @include image-2x("../images/pngs/about-hero-bg-2x.png", 1420, 811);
+}
