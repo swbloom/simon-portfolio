@@ -85,3 +85,12 @@ footer {
   height: 500px;
   padding-top: 125px;
 }
+
+.copyright {
+  font-family: $secondary-font;
+  font-size: 1.16rem;
+  line-height: 2.5;
+  color: #8da0a6;
+  position: absolute;
+  bottom: 0;
+}

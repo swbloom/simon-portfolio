@@ -1,0 +1,66 @@
+.portfolio-short-outercontainer {
+  padding-top: 68px;
+  padding-bottom: 73px;
+  background-color: #0b2d37;
+}
+.portfolio-short-container {
+  background-image: #{$bgGradient}, url(../images/pngs/work-item1-bg.png);
+}
+.portfolio-short {
+  display: flex;
+  min-height: 601px;
+  padding-top: 67px;
+}
+
+
+
+.portfolio-short-feature {
+  width: 50%;
+  background-image: url(../images/pngs/work-item1-geometry.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include image-2x("../images/pngs/work-item1-geometry-2x.png", 392, 392, false);
+}
+
+.portfolio-short-body {
+  width: 50%;
+}
+
+.portfolio-short-body h2 {
+  font-size: 4.16rem;
+  line-height: 1;
+  font-family: $heading-font;
+  letter-spacing: 7.1px;
+  color: #fff;
+  font-weight: 400;
+  padding-top: 15px;
+}
+
+.portfolio-short-body strong {
+  display: block;
+  font-family: $secondary-font;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.2l;
+  letter-spacing: 0.2p;
+  color: #8da0a6;
+  padding-bottom: 15px;
+}
+.portfolio-short-body button {
+  margin-top: 42px;
+}
+
+.portfolio-short-body p {
+  color: #fff;
+}
+
+.portfolio-category {
+  display: block;
+  font-family: $heading-font;
+  font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 3.6;
+  letter-spacing: 2.1px;
+  color: #a8996e;
+  text-transform: uppercase;
+}

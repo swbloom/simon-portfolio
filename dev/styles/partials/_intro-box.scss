@@ -1,0 +1,15 @@
+.intro-box {
+  display: flex;
+}
+.intro-box-body {
+  max-width: 421px;
+  padding-right: 77px;
+}
+
+.intro-box-body strong {
+  font-family: $secondary-font;
+  font-size: 1.66rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: #a8996e;
+}

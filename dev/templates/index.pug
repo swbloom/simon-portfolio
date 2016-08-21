@@ -2,6 +2,33 @@
 html(lang="en")
 head
   meta(charset="UTF-8")
-  title  Document
+  title Simon W. Bloom / About
+  include ./includes/head.pug
 body
-  
+  header.hero-container.hero-container--landing.hero-container--about
+    .hero.wrapper
+      .hero-nav-wrapper
+        .logo
+          img(src='/public/images/svgs/swb-badge-blog.svg')
+          //- Logo here
+        nav
+          include ./includes/nav.pug
+      .hero-text-wrapper
+        img(src='/public/images/svgs/bird-icon.svg').bird-header
+        img(src='./images/pngs/home-headline.png')
+        span.hero-subtext Design-minded web development
+        span.location Toronto, Canada
+  main
+    .wrapper
+      .agencies
+        h2 Creative Agencies
+        span.subtext Some of the great companies I've had the chance to work with
+        .agency-rolodex
+          picture
+            source(srcset="/images/pngs/nascent-logo-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+            img(src="images/pngs/nascent-logo.png" width="213px" height="28px")
+            source(srcset="/images/pngs/jam3-logo-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+            img(src="images/pngs/jam3-logo.png" width="113px" height="54px")
+            source(srcset="/images/pngs/grassriots-logo-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+            img(src="images/pngs/grassriots-logo.png" width="208px" height="48px")
+  include ./includes/footer.pug

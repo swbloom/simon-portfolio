@@ -17,6 +17,9 @@
 .hero-container--internal {
   height: 534px;
 }
+.hero-container--landing {
+  height: 822px;
+}
 
 .hero-container--about {
   background: #{$bgGradient}, url('../images/pngs/about-hero-bg.png');
@@ -38,4 +41,9 @@
   font-style: italic;
   line-height: 3.1;
   letter-spacing: 0.4px;
+}
+
+.bird-header {
+  width: 75px !important;
+  height: 75px;
 }

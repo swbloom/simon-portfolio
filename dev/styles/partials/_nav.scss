@@ -1,11 +1,36 @@
 nav ul {
   display: flex;
   font-size: 1.0833rem;
+  font-family: $heading-font;
   text-transform: uppercase;
-  color: #FFF;
   letter-spacing: 1.4px;
   line-height: 2.3;
 }
 nav ul li {
   width: 119px;
+}
+nav ul li a {
+  position: relative;
+  color: #8da0a6;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out 0s;
+  &:hover {
+    color: #fff;
+    &:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 2px;
+    bottom: -7px;
+    left: -10%;
+    background-color: #a8996e  ;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
 }
