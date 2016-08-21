@@ -1,11 +1,18 @@
+// General
 @import "partials/mixins";
-@import "partials/global";
 @import "partials/variables";
+@import "partials/global";
+@import "partials/animations";
 @import "partials/fonts";
+@import "partials/buttons";
 
-
+// Layout
 @import "partials/header";
 @import "partials/nav";
 @import "partials/footer";
 
+// Components
+@import "partials/brief";
+
+// Pages
 @import "partials/about";

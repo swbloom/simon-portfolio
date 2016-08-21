@@ -1,0 +1,23 @@
+button {
+  position: relative;
+  width: 160px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #fff;
+  font-family: $heading-font;
+  font-size: 1.075rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  color: #fff;
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 172px;
+    height: 67px;
+    border: 1.5px solid #a8996e;
+    top: -8px;
+    left: -8px;
+  }
+}

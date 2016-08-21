@@ -1,11 +1,12 @@
-$heading-font: "proxima nova", sans-serif;
-$secondary-font: "adobe-garamond-pro", serif;
-
-
-
 html {
   font-size: 12px;
-  font-family: $heading-font;
+}
+
+body {
+  font-family: $secondary-font;
+  line-height: 1.6;
+  font-size: 1.66rem;
+  color: #4c5256;
 }
 
 h1 {
@@ -38,7 +39,8 @@ h4 {
   font-family: $heading-font;
   color: $dark-blue;
   line-height: 1.6;
-  font-weight: 700 // bold
+  font-weight: 700; // bold
+  font-size: 2.66rem;
 }
 
 h5 {

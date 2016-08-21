@@ -1,0 +1,28 @@
+.brief {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: #4c5256;
+  font-family: $secondary-font;
+}
+
+.brief ul li {
+  padding-bottom: 19px;
+}
+
+.brief-column {
+  min-width: 221px;
+}
+
+.brief-column img {
+  padding-bottom: 12px;
+}
+
+.brief-line {
+  display: block;
+  height: 1px;
+  border-top: 1px solid #d6d6d6;
+  padding-bottom: 28px;
+}

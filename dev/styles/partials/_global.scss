@@ -54,5 +54,29 @@ table {
 }
 
 main {
-	padding-top: 93px;
+	padding: 93px 0px;
+	width: 782px;
+	margin: 0 auto;
+}
+
+.columns {
+	display: flex;
+}
+.column {
+	max-width: 363px;
+}
+.column:first-of-type {
+	margin-right: 28px;
+}
+.column:nth-of-type(2) {
+	margin-left: 28px;
+}
+
+.subtext {
+  font-family: $secondary-font;
+  color: #d9c19b;
+  font-size: 1.666rem;
+  font-style: italic;
+  line-height: 3.1;
+  letter-spacing: 0.4px;
 }

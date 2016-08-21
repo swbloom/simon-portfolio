@@ -1,14 +1,87 @@
 footer {
-  background: #{$bgGradient}, url('../images/pngs/footer-bg.png');
-  @include image-2x("../images/pngs/footer-2x.png", 1420, 811);
+  background: linear-gradient(rgba(11, 45, 55, 0.75), rgba(11, 45, 55, 0.75)), url('../images/pngs/footer-bg.png');
+  @include image-2x("../images/pngs/footer-bg-2x.png", 1420, 811, true);
   background-size: cover;
+  position: relative;
+  padding-bottom: 96px;
 }
 
+.footer-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 95px;
+}
+
+.made-in {
+  font-family: $heading-font;
+  line-height: 3.6;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 1.16rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.shape {
+  background-size: cover;
+  position: absolute;
+  animation-timing-function: linear;
+}
+
+.shape--cube {
+  width: 146px;
+  height: 129px;
+  background: url('../images/pngs/footer-cube.png');
+  @include image-2x("../images/pngs/footer-cube-2x.png", 146, 129, false);
+  top: 442px;
+  left: 60px;
+  animation-name: rotate-backwards;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}
+
+.shape--sacred {
+  width: 301px;
+  height: 301px;
+  top: 118px;
+  left: -50px;
+  background: url('../images/pngs/footer-sacred.png');
+  @include image-2x("../images/pngs/footer-sacred-2x.png", 150, 150, false);
+  animation-name: rotate;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+}
+
+.shape--sunfire {
+  width: 139px;
+  height: 149px;
+  right: 0;
+  top: 128px;
+  background: url('../images/pngs/footer-sunfire.png');
+  @include image-2x("../images/pngs/footer-sunfire-2x.png", 139, 149, false);
+  animation-name: rotate-backwards;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.shape--starball {
+  width: 293px;
+  height: 293px;
+  right: 0;
+  top: 298px;
+  background: url('../images/pngs/footer-starball.png');
+  @include image-2x("../images/pngs/footer-starball-2x.png", 293, 293, false);
+  animation-name: rotate;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+}
 
 .footer-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 682px;
+  height: 500px;
+  padding-top: 125px;
 }
