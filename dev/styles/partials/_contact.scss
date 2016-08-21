@@ -1,0 +1,27 @@
+.contact {
+  min-height: 683px;
+  background-color: #fbfbf9;
+}
+.contact-container {
+  display: flex;
+}
+.contact-form {
+  padding-top: 87px;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: #4c5256;
+  min-width: 520px;
+}
+.contact-calendar {
+  background-color: #0b2d37;
+  width: 100%;
+  padding: 87px 67px 0px 67px;
+}
+.contact-form h3 {
+  padding-bottom: 27px;
+}
+.contact-calendar h3 {
+  color: #fff;
+  letter-spacing: 0.2px;
+  font-size: 2.16rem;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Simon W. Bloom / About
+  include ./includes/head.pug
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
+  script(src="/scripts/vendor/moment.min.js")
+  script(src="/scripts/vendor/clndr.min.js")
+
+  Copy
+
+body
+  header.hero-container.hero-container--internal.hero-container--about
+    .hero.wrapper
+      .hero-nav-wrapper
+        .logo
+          img(src='/public/images/svgs/swb-badge-blog.svg')
+          //- Logo here
+        nav
+          include ./includes/nav.pug
+      .hero-text-wrapper
+        span.hero-subtext Want to chat?
+        h1 Get in Touch
+        span.hero-subtext I'd love to hear from you
+  main
+    .wrapper
+      .headline-wrapper--about
+        h3 I take on contract work with great agencies, as well as the occasional freelance project.
+      p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt saepe, ipsam eos illo quisquam laborum cumque a ad esse, placeat, culpa officia aut laboriosam, excepturi doloribus necessitatibus minima alias modi?
+  .contact
+    .wrapper
+      .contact-container
+        .contact-form
+          h3 Get in touch.
+          form
+            .form-row
+              label(for="name") Hi there! My name is
+                input(type="text" id="name" placeholder="Type your name here").
+            .form-row
+              label(for="email") You can e-mail me at
+                input(type="text" id="email" placeholder="You@awesomeinc.io").
+            .form-row
+              label(for="subject") Let's chat about an upcoming
+                select
+                  option agency contract
+                  option freelance project
+                  option speaking opportunity
+            .form-row
+              label(for="details") Here are the details:
+                textarea
+            button Submit
+        .contact-calendar
+          h3 Let me check my schedule...
+          .calendar
+  include ./includes/footer.pug

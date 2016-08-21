@@ -1,0 +1,24 @@
+.calendar {
+  width: 300px;
+  border: 1px solid #808080;
+}
+
+.clndr-controls {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0b2d37;
+  padding: 37px 31px;
+}
+
+.clndr-table {
+  width: 100%;
+  background-color: #fff;
+}
+
+.month {
+  font-size: 1.16rem;
+  font-family: $secondary-font;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
