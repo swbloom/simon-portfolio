@@ -2,21 +2,22 @@
 html(lang="en")
 head
   meta(charset="UTF-8")
-  title Simon W. Bloom / About
+  title Simon W. Bloom
   include ./includes/head.pug
-body
-  header.hero-container.hero-container--landing.hero-container--about
+body(class="home")
+  header.hero-container.hero-container--landing
     .hero.wrapper
       .hero-nav-wrapper
-        .logo
-          img(src='/public/images/svgs/swb-badge-blog.svg')
-          //- Logo here
-        nav
-          include ./includes/nav.pug
+        .hero-content-wrapper
+          .logo
+            img(src='/public/images/svgs/swb-badge-blog.svg')
+            //- Logo here
+          nav
+            include ./includes/nav.pug
       .hero-text-wrapper
         img(src='/public/images/svgs/bird-icon.svg').bird-header
-        img(src='./images/pngs/home-headline.png')
-        span.hero-subtext Design-minded web development
+        h1.home-headline Simon Bloom
+        span.home-subtext Design-minded web development
         span.location Toronto, Canada
   main
     .wrapper
@@ -33,4 +34,58 @@ body
           picture
             source(srcset="/images/pngs/grassriots-logo-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
             img(src="images/pngs/grassriots-logo.png" width="208px" height="48px")
+    .latest-work
+      .wrapper
+        .columns
+          .latest-work-column-left
+            picture.latest-work-proportion
+            source(srcset="/images/pngs/proportion-2x.png" width="324px" height="280px" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+            img(src="images/pngs/proportion.png" width="324px" height="280px")
+          .latest-work-column-right
+            h2 Latest Work
+            span.subtext My most recent experiences
+    .portfolio-short-outercontainer
+      .portfolio-short-container
+          .wrapper
+            .portfolio-short
+              .portfolio-short-body
+                span.portfolio-category Agency Contract
+                h2 Jam3
+                strong Make cool shit- and don't fuck it up.
+                p Jam3 is one of the world's top digital and production design agencies. They specialize in creating highly advanced, experiential works in both the advertising and entertainment industry.
+                button Read on
+              .portfolio-short-feature
+    .blogroll
+      .wrapper.blogroll-wrapper
+        h2 The Blog
+        span.subtext My most recent musings
+        .tagcloud
+          button.tag Wordpress
+          button.tag All Tags
+          button.tag Javascript
+        .blogroll-excerpt
+          ul.blogroll-details
+            li.blogroll-date August 4th, 2014
+            li.blogroll-length 5 Minute Read
+            li.blogroll-category filed under
+              span.blogroll-category-single process
+          h3.blogroll-title Speed Up Your Workflow with Alfred
+          p.blogroll-content Welcome to my series of posts on Alfred, the best thing to happen to your workflow since learning how to touch type.
+        .blogroll-excerpt
+          ul.blogroll-details
+            li.blogroll-date August 4th, 2014
+            li.blogroll-length 5 Minute Read
+            li.blogroll-category filed under
+              span.blogroll-category-single process
+          h3.blogroll-title Speed Up Your Workflow with Alfred
+          p.blogroll-content Welcome to my series of the best thing to happen to your workflow since learning how to touch type.
+        .blogroll-excerpt
+          ul.blogroll-details
+            li.blogroll-date August 4th, 2014
+            li.blogroll-length 5 Minute Read
+            li.blogroll-category filed under
+              span.blogroll-category-single process
+          h3.blogroll-title Speed Up Your Workflow with Alfred
+          p.blogroll-content Welcome to my series of the best thing to happen to your workflow since learning how to touch type.
+
   include ./includes/footer.pug

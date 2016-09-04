@@ -1,0 +1,17 @@
+.tagcloud {
+  display: flex;
+  margin: 56px 0px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-family: $heading-font;
+  letter-spacing: 2.1px;
+  font-size: 1.16rem;
+  height: 46px;
+  min-width: 171px;
+  background: none;
+  font-weight: 600;
+  border: solid 1.5px #0b2d37;
+  margin: 0 24px;
+}

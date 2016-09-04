@@ -6,10 +6,10 @@
          (min-resolution: 1.3dppx) {
     /* on retina, use image that's scaled by 2 */
     @if ($hero == true) {
+      background-size: $width $height;
       background-image: #{$bgGradient} url($image);
-      background-size: cover;
     } @else {
-      background-size: cover;
+      background-size: $width $height;
       background-image: url($image);
     }
   }

@@ -1,0 +1,59 @@
+.blogroll {
+  background-color: #f4f4ef;
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+.blogroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogroll-excerpt {
+  height: 114px;
+  width: 100%;
+  background-color: #fff;
+  margin: 16px 0;
+  padding: 65px;
+}
+
+.blogroll-title {
+  font-size: 2.5rem;
+  margin: 8.8px 0 24px 0;
+}
+
+.blogroll-content {
+  font-size: 1.33rem;
+}
+
+.blogroll-details {
+  display: flex;
+  font-size: 1.16rem;
+  font-weight: 600;
+  font-family: $heading-font;
+  text-transform: uppercase;
+  line-height: 2.2;
+}
+
+.blogroll-date {
+  color: #a8996e;
+}
+
+.blogroll-length {
+  margin: 0 21px;
+  color: #b6b6b6;
+}
+
+.blogroll-category {
+  font-size: 1.08rem;
+  font-family: $secondary-font;
+  font-style: italic;
+  color: #b6b6b6;
+  letter-spacing: 0.1px;
+  text-transform: none;
+}
+
+.blogroll-category-single {
+  color: #a8996e;
+}

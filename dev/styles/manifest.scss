@@ -2,8 +2,8 @@
 @import "partials/mixins";
 @import "partials/variables";
 @import "partials/global";
-@import "partials/animations";
 @import "partials/fonts";
+@import "partials/animations";
 @import "partials/buttons";
 @import "partials/forms";
 
@@ -18,7 +18,12 @@
 @import "partials/portfolio-short";
 @import "partials/agencies";
 @import "partials/calendar";
+@import "partials/headline";
+@import "partials/blogroll";
+@import "partials/tagcloud";
+@import "partials/availability";
 
 // Pages
+@import "partials/home";
 @import "partials/about";
 @import "partials/contact";

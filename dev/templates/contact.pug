@@ -14,20 +14,21 @@ body
   header.hero-container.hero-container--internal.hero-container--about
     .hero.wrapper
       .hero-nav-wrapper
-        .logo
-          img(src='/public/images/svgs/swb-badge-blog.svg')
-          //- Logo here
-        nav
-          include ./includes/nav.pug
+        .hero-content-wrapper
+          .logo
+            img(src='/public/images/svgs/swb-badge-blog.svg')
+            //- Logo here
+          nav
+            include ./includes/nav.pug
       .hero-text-wrapper
         span.hero-subtext Want to chat?
         h1 Get in Touch
         span.hero-subtext I'd love to hear from you
   main
     .wrapper
-      .headline-wrapper--about
+      .headline-wrapper
         h3 I take on contract work with great agencies, as well as the occasional freelance project.
-      p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt saepe, ipsam eos illo quisquam laborum cumque a ad esse, placeat, culpa officia aut laboriosam, excepturi doloribus necessitatibus minima alias modi?
+        p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt saepe, ipsam eos illo quisquam laborum cumque a ad esse, placeat, culpa officia aut laboriosam, excepturi doloribus necessitatibus minima alias modi?
   .contact
     .wrapper
       .contact-container

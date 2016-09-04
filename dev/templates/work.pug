@@ -8,11 +8,12 @@ body
   header.hero-container.hero-container--internal.hero-container--about
     .hero.wrapper
       .hero-nav-wrapper
-        .logo
-          img(src='/public/images/svgs/swb-badge-blog.svg')
-          //- Logo here
-        nav
-          include ./includes/nav.pug
+        .hero-content-wrapper
+          .logo
+            img(src='/public/images/svgs/swb-badge-blog.svg')
+              //- Logo here
+          nav
+            include ./includes/nav.pug
       .hero-text-wrapper
         span.hero-subtext A collection of projects & contracts
         h1 Work

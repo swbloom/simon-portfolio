@@ -1,6 +1,7 @@
 
 .hero {
   padding-top: 55px;
+  .stuck & {}
 }
 
 .hero h1 {
@@ -9,16 +10,57 @@
 }
 
 .hero-nav-wrapper {
+
+}
+.hero-content-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hero-nav-wrapper.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  top: -100%;
+  background-color: rgba(11, 44, 55, 0.93);
+  height: 70px;
+  .hero-content-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+    height: 70px;
+  }
+  .logo svg {
+    width: 79px;
+    height: 80px;
+    position: relative;
+    top: 35px;
+    right: 50px;
+  }
+}
+
+.hero-nav-wrapper.fixed {
+  width: 100%;
+  background-color: rgba(11, 44, 55, 0.93);
+  left: 0;
+  height: 70px;
+  svg {
+    width: 79px;
+    height: 80px;
+    position: relative;
+    top: 35px;
+    left: 185px;
+  }
 }
 
 .hero-container--internal {
   height: 534px;
 }
 .hero-container--landing {
-  height: 822px;
+  background: #{$bgGradient}, url('../images/pngs/about-hero-bg.png');
+  height: 100vh;
+  min-height: 800px;
 }
 
 .hero-container--about {
@@ -33,6 +75,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+
 
 .hero-subtext {
   font-family: $secondary-font;

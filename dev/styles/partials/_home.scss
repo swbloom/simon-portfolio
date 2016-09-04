@@ -1,0 +1,47 @@
+.home-headline {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  font-family: $logo-font;
+  // font-size: 50px;
+  letter-spacing: 4px;
+  text-shadow: 2px 3px #a8996e;
+}
+
+.home-subtext {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  font-size: 1.33rem;
+  color: #a8996e;
+  letter-spacing: 4px;
+  line-height: 2.2;
+}
+
+.location {
+  font-size: $secondary-font;
+  font-size: 1.66rem;
+  line-height: 1.8;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  color: #8da0a6;
+}
+
+.latest-work {
+  background-color: #0b2d37;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.latest-work-column-right {
+  padding-top: 135px;
+  margin-left: -80px;
+  h2, span {
+    line-height: 1;
+  }
+}
+
+.latest-work h2 {
+  color: #fff;
+}

@@ -49,13 +49,11 @@ table {
 
 
 .wrapper {
-	max-width: 1030px;
+	max-width: 940px;
 	margin: 0 auto;
 }
 
 main {
-	padding: 93px 0px;
-	max-width: 782px;
 	margin: 0 auto;
 }
 
@@ -79,4 +77,19 @@ main {
   font-style: italic;
   line-height: 3.1;
   letter-spacing: 0.4px;
+}
+
+.fixed {
+	position: fixed;
+	display: none;
+	z-index: 1;
+	top: 0;
+}
+
+html {
+  font-size: 12px;
+}
+
+.columns {
+	display: flex;
 }

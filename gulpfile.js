@@ -9,6 +9,7 @@ const autoprefixer  = require('gulp-autoprefixer');
 const browserSync   = require('browser-sync').create();
 const injectSvg     = require('gulp-inject-svg');
 const sourcemaps    = require('gulp-sourcemaps');
+const plumber       = require('gulp-plumber');
 const reload        = browserSync.reload;
 
 gulp.task('templates', () => {
@@ -34,6 +35,7 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   return gulp.src('./dev/scripts/main.js')
+    .pipe(plumber())
     .pipe(babel({
       presets: ['es2015']
     }))
@@ -43,7 +45,8 @@ gulp.task('scripts', () => {
 
 gulp.task('browser-sync', () => {
   browserSync.init({
-    server: './public'
+    server: './public',
+    open: false
   })
 });
 
