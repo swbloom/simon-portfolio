@@ -1,5 +1,19 @@
 const app = {};
 
+app.post = function() {
+  const $post = $('article.post');
+  const $sections = $('.post-content section');
+  const $tableOfContents = $('.table-of-contents');
+
+  if (!$post.length) return;
+
+  $sections.each(function(){
+    const sectionName = $(this).data('section');
+    $tableOfContents.append(`<li>${sectionName}</li>`);
+  });
+    $tableOfContents.append(`<li>Tweet This</li>`);
+}
+
 app.sticky = function() {
   // Sticky Nav
   const $header = $("header");
@@ -33,6 +47,7 @@ app.sticky = function() {
 app.masonry = function() {
   // Masonry
   const $blogRoll = $('.blogroll-articles');
+  const $tags = $('button.tag');
 
   if ($blogRoll.length) {
     $blogRoll.isotope({
@@ -40,7 +55,9 @@ app.masonry = function() {
        layoutMode: 'vertical'
     });
 
-    $('button.tag').on('click', function(){
+    $tags.on('click', function(){
+      $tags.removeClass('tag--active');
+      $(this).addClass('tag--active');
       const filter =  $(this).data('filter');
       $blogRoll.isotope({filter: filter});
     });
@@ -92,4 +109,5 @@ $(document).ready(() => {
     app.sticky();
     $('.calendar').length && app.calendar();
     app.masonry();
+    app.post();
 });

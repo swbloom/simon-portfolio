@@ -23,5 +23,16 @@ body
           p.article-length= articleLength
           p.article-published= articlePublished
   main
+    include /includes/table-of-contents.pug
+    .wrapper
+      article.post
+        .post-filed-under Filed Under:
+          span.post-tags= postTags
+        h1.post-title= postTitle
+        p.post-summary= postSummary
+        div.post-content
+          section(data-section="Introduction") Introduction
+          section(data-section="Examples") Examples
+          section(data-section="Finished Code") Finished Code
 
   include /includes/footer.pug

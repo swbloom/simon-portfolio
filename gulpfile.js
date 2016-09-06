@@ -14,9 +14,11 @@ const notify        = require('gulp-notify');
 const reload        = browserSync.reload;
 
 gulp.task('templates', () => {
-  return gulp.src('./dev/templates/*.pug')
+  return gulp.src('./dev/templates/**/*.pug')
+    .pipe(plumber())
     .pipe(pug({
-      pretty: true
+      pretty: true,
+      basedir: __dirname + '/dev/templates'
     }))
     .pipe(injectSvg())
     .pipe(gulp.dest('./public/'))
@@ -57,7 +59,7 @@ gulp.task('browser-sync', () => {
 gulp.task('watch', () => {
     gulp.watch('./dev/styles/**/*.scss', ['styles']);
     gulp.watch('./dev/scripts/*.js', ['scripts']);
-    gulp.watch('./dev/templates/*.pug', ['templates']);
+    gulp.watch('./dev/templates/**/*.pug', ['templates']);
 });
 
 gulp.task('default', ['browser-sync', 'styles', 'scripts', 'templates', 'watch']);
