@@ -1,0 +1,27 @@
+include post-details.pug
+
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Simon W. Bloom / Blog
+  include /includes/head.pug
+  script(src="/scripts/vendor/isotope.pkgd.min.js")
+body
+  header.hero-container.hero-container--internal.hero-container--about
+    .hero.wrapper
+      .hero-nav-wrapper
+        .hero-content-wrapper
+          .logo
+            img(src='/public/images/svgs/swb-badge-blog.svg')
+            //- Logo here
+          nav
+            include /includes/nav.pug
+      .hero-text-wrapper
+        h1.article-title= articleName
+        div.article-details
+          p.article-length= articleLength
+          p.article-published= articlePublished
+  main
+
+  include /includes/footer.pug
