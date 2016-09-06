@@ -10,6 +10,7 @@ const browserSync   = require('browser-sync').create();
 const injectSvg     = require('gulp-inject-svg');
 const sourcemaps    = require('gulp-sourcemaps');
 const plumber       = require('gulp-plumber');
+const notify        = require('gulp-notify');
 const reload        = browserSync.reload;
 
 gulp.task('templates', () => {
@@ -25,7 +26,7 @@ gulp.task('templates', () => {
 gulp.task('styles', () => {
   return gulp.src('./dev/styles/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', (err) => notify().write(err)))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(concat('style.css'))

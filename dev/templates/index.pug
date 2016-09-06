@@ -4,6 +4,7 @@ head
   meta(charset="UTF-8")
   title Simon W. Bloom
   include ./includes/head.pug
+  script(src="/scripts/vendor/isotope.pkgd.min.js")
 body(class="home")
   header.hero-container.hero-container--landing
     .hero.wrapper
@@ -17,7 +18,7 @@ body(class="home")
       .hero-text-wrapper
         img(src='/public/images/svgs/bird-icon.svg').bird-header
         h1.home-headline Simon Bloom
-        span.home-subtext Design-minded web development
+        span.home-subtext Design Minded Web Development
         span.location Toronto, Canada
   main
     .wrapper
@@ -59,33 +60,6 @@ body(class="home")
       .wrapper.blogroll-wrapper
         h2 The Blog
         span.subtext My most recent musings
-        .tagcloud
-          button.tag Wordpress
-          button.tag All Tags
-          button.tag Javascript
-        .blogroll-excerpt
-          ul.blogroll-details
-            li.blogroll-date August 4th, 2014
-            li.blogroll-length 5 Minute Read
-            li.blogroll-category filed under
-              span.blogroll-category-single process
-          h3.blogroll-title Speed Up Your Workflow with Alfred
-          p.blogroll-content Welcome to my series of posts on Alfred, the best thing to happen to your workflow since learning how to touch type.
-        .blogroll-excerpt
-          ul.blogroll-details
-            li.blogroll-date August 4th, 2014
-            li.blogroll-length 5 Minute Read
-            li.blogroll-category filed under
-              span.blogroll-category-single process
-          h3.blogroll-title Speed Up Your Workflow with Alfred
-          p.blogroll-content Welcome to my series of the best thing to happen to your workflow since learning how to touch type.
-        .blogroll-excerpt
-          ul.blogroll-details
-            li.blogroll-date August 4th, 2014
-            li.blogroll-length 5 Minute Read
-            li.blogroll-category filed under
-              span.blogroll-category-single process
-          h3.blogroll-title Speed Up Your Workflow with Alfred
-          p.blogroll-content Welcome to my series of the best thing to happen to your workflow since learning how to touch type.
+        include ./includes/blogroll.pug
 
   include ./includes/footer.pug

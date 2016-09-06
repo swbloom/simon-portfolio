@@ -2,6 +2,8 @@
   width: 300px;
   border: 1px solid #808080;
 }
+.clndr {
+}
 
 .clndr-controls {
   display: flex;
@@ -12,7 +14,40 @@
 
 .clndr-table {
   width: 100%;
+  font-size: 1.16rem;
   background-color: #fff;
+}
+
+.days-of-the-week {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clndr-grid {
+  background-color: #fff;
+  font-size: 1.16rem;
+  padding: 33px;
+}
+
+.header-day {
+  width: 14.2%;
+  color: #0b2d37;
+  padding-bottom: 21px;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 14.2%;
+
+}
+
+.clndr-year {
+  color: #a8996e;
 }
 
 .month {

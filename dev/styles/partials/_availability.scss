@@ -33,10 +33,10 @@
   letter-spacing: 2.8px;
 }
 
-.years {
+.chart-months {
   display: flex;
 }
-.year {
+.chart-month {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +46,11 @@
   font-family: $secondary-font;
   font-size: 1.16rem;
   background-color: #d6d6d6;
+}
+
+.chart-month--available {
+  background-color: #0b2d37;
+  color: #fff;
 }
 
 .chart-options {

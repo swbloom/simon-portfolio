@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Simon W. Bloom / Blog
+  include ./includes/head.pug
+  script(src="/scripts/vendor/isotope.pkgd.min.js")
+body
+  header.hero-container.hero-container--internal.hero-container--about
+    .hero.wrapper
+      .hero-nav-wrapper
+        .hero-content-wrapper
+          .logo
+            img(src='/public/images/svgs/swb-badge-blog.svg')
+            //- Logo here
+          nav
+            include ./includes/nav.pug
+      .hero-text-wrapper
+        span.hero-subtext Welcome to my blog,
+        h1 The Drawing Board
+        span.hero-subtext Feel free to stay awhile.
+  main
+      .blogroll
+        .wrapper.blogroll-wrapper
+          h2 The Blog
+          span.subtext My most recent musings
+          include ./includes/blogroll.pug
+
+  include ./includes/footer.pug
