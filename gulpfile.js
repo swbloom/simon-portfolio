@@ -26,7 +26,10 @@ gulp.task('templates', () => {
 gulp.task('styles', () => {
   return gulp.src('./dev/styles/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', (err) => notify().write(err)))
+    .pipe(sass().on('error', function(err) {
+      notify().write(err);
+      this.emit('end');
+    }))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(concat('style.css'))

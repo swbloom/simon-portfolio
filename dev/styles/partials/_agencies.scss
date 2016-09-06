@@ -14,7 +14,15 @@
 .agency-rolodex {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 70px;
+  flex-wrap: wrap;
+  picture {
+    filter: grayscale(100%);
+    transition: 0.3s filter ease-in-out;
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
 }
