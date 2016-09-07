@@ -1,0 +1,81 @@
+
+article.post {
+  padding: 84px 0;
+  position: relative;
+  max-width: 622px;
+  margin: 0 auto;
+}
+
+.post-single main {
+  position: relative;
+}
+
+
+.post-single {
+  .hero-text-wrapper {
+    text-align: center;
+  }
+}
+
+h1.article-title {
+  font-size: 2.25rem;
+  line-height: 1.5;
+  max-width: 780px;
+}
+
+.article-length {
+  text-transform: uppercase;
+  font-family: $heading-font;
+  font-size: 1.05rem;
+  line-height: 4;
+  letter-spacing: 2.1px;
+  color: #d9c19b;
+}
+
+.article-published {
+  font-size: 1.41rem;
+  font-family: $secondary-font;
+  font-style: italic;
+  line-height: 2.1;
+  color: #8da0a6;
+}
+
+.post-filed-under {
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  line-height: 2.3;
+  letter-spacing: 2px;
+  color: #4c5256;
+  margin-bottom: 57px;
+}
+
+.post-title {
+  font-family: $secondary-font;
+  font-size: 3.33rem;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+  color: #0b2d37;
+  text-transform: none;
+  max-width: 622px;
+  margin-bottom: 38px;
+}
+
+.post-tags {
+  font-family: $secondary-font;
+  text-transform: none;
+  line-height: 2.1;
+  font-size: 1.41rem;
+  font-style: italic;
+  color: #a8996e;
+}
+
+.post-summary {
+  font-family: $secondary-font;
+  font-size: 1.91rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin-bottom: 38px;
+}

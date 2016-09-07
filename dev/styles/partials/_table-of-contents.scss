@@ -1,0 +1,45 @@
+.table-of-contents {
+  position: absolute;
+  right: -190px;
+  top: 100px;
+}
+
+.table-of-contents--fixed {
+  position: fixed;
+  right: -190px;
+  top: 100px;
+}
+
+.table-of-contents-index {
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8da0a6;
+  .active & {
+    background-color: #0b2d37;
+  }
+}
+
+.table-of-contents-index--twitter {
+  background-color: #a6d5e4;
+}
+
+.table-of-contents-item {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4ef;
+  width: 250px;
+  height: 60px;
+  margin-bottom: 2px;
+
+}
+.table-of-contents-title {
+  font-size: 1.08rem;
+  text-transform: uppercase;
+  line-height: 2.7;
+  letter-spacing: 2.4px;
+  padding-left: 15px;
+}

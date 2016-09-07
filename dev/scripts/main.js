@@ -7,11 +7,76 @@ app.post = function() {
 
   if (!$post.length) return;
 
-  $sections.each(function(){
-    const sectionName = $(this).data('section');
-    $tableOfContents.append(`<li>${sectionName}</li>`);
+  let waypoint = new Waypoint({
+    element: $('article.post'),
+    handler: function(direction){
+        direction === "down" ? $tableOfContents.addClass('table-of-contents--fixed') : $tableOfContents.removeClass('table-of-contents--fixed');
+    }
   });
-    $tableOfContents.append(`<li>Tweet This</li>`);
+
+  let footerWaypoint = new Waypoint({
+    element: $('article.post'),
+    handler: function(direction){
+      let topPos = $tableOfContents.offset().top - $tableOfContents.parent().offset().top - $tableOfContents.parent().scrollTop();
+      direction === "down" ? $tableOfContents.css({'position': 'absolute', 'top': topPos }) : $tableOfContents.removeAttr('style');
+    },
+    offset: 'bottom-in-view'
+  });
+
+  $tableOfContents.on('mouseenter', 'li', function(){
+    TweenLite.to($tableOfContents, 1, {
+      right: 0,
+      ease: Power1.easeInOut,
+      onComplete: function() {
+      }
+    })
+  });
+
+  $tableOfContents.on('mouseleave', 'li', function(){
+    console.log('hovered');
+    TweenLite.to($tableOfContents, 1, {
+      right: -190,
+      ease: Power1.easeInOut,
+      onComplete: function() {
+      }
+    });
+  });
+
+  $sections.each(function(index){
+    const sectionName = $(this).data('section');
+    let waypoint = new Waypoint({
+      element: $(this),
+      handler: function(direction) {
+        const corresponding = $(`[data-section='${sectionName}']`);
+        direction === "down" ? corresponding.addClass('active') : corresponding.removeClass('active');
+      },
+      offset: 70
+    })
+    let listItem = `
+      <li>
+        <div class="table-of-contents-item" data-section="${sectionName}">
+          <div class="table-of-contents-index">
+            ${index}
+          </div>
+          <div class="table-of-contents-title">
+            ${sectionName}
+          </div>
+        </div>
+      </li>
+    `
+    $tableOfContents.append(listItem);
+  });
+    $tableOfContents.append(`
+      <li>
+        <div class="table-of-contents-item">
+          <div class="table-of-contents-index table-of-contents-index--twitter">
+          </div>
+          <div class="table-of-contents-title">
+            Tweet this
+          </div>
+        </div>
+      </li>
+    `);
 }
 
 app.sticky = function() {
@@ -42,6 +107,15 @@ app.sticky = function() {
       }
     }
   });
+
+  const footerInView = new Waypoint({
+    element: $('main'),
+    offset: 'bottom-in-vew',
+    handler: function(direction) {
+      // let topPos = $nav.offset().top - $nav.parent().offset().top - $nav.parent().scrollTop();
+      // direction === "down" ? $nav.css({'position': 'absolute', 'top': topPos }) : $nav.removeAttr('style');
+    }
+  })
 }
 
 app.masonry = function() {
