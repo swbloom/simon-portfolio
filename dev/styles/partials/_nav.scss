@@ -1,3 +1,9 @@
+nav {
+  padding-bottom: 25px;
+  .sticky & {
+    padding-bottom: 0px;
+  }
+}
 nav ul {
   display: flex;
   font-size: 1.0833rem;

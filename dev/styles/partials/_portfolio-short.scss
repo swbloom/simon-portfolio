@@ -8,8 +8,9 @@
 }
 .portfolio-short {
   display: flex;
-  min-height: 601px;
-  padding-top: 67px;
+  // min-height: 601px;
+  padding-top: 48px;
+  padding-bottom: 60px;
 }
 
 
@@ -18,14 +19,23 @@
   width: 50%;
   background-image: url(../images/pngs/work-item1-geometry.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 80% 20%;
   @include image-2x("../images/pngs/work-item1-geometry-2x.png", 392px, 392px, false);
 }
 
 .portfolio-short-body {
   width: 50%;
+  padding-bottom: 60px;
 }
 
+.portfolio-short-outercontainer:nth-of-type(even) .portfolio-short-container {
+  text-align: right;
+}
+
+.portfolio-short-outercontainer:not(:first-of-type):not(:last-of-type) {
+  padding-top: 0px;
+  padding-bottom: 0x;
+}
 .portfolio-short-body h2 {
   font-size: 4.16rem;
   line-height: 1;
@@ -34,6 +44,7 @@
   color: #fff;
   font-weight: 400;
   padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 .portfolio-short-body strong {
@@ -44,7 +55,7 @@
   line-height: 1.2l;
   letter-spacing: 0.2p;
   color: #8da0a6;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 .portfolio-short-body button {
   margin-top: 42px;
@@ -52,6 +63,8 @@
 
 .portfolio-short-body p {
   color: #fff;
+  line-height: 1.7;
+  font-size: 1.71rem;
 }
 
 .portfolio-category {
@@ -62,5 +75,6 @@
   line-height: 3.6;
   letter-spacing: 2.1px;
   color: #a8996e;
+  margin-bottom: 33px;
   text-transform: uppercase;
 }

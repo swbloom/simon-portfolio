@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'andale_mono';
+    src: url('/fonts/andale-mono-webfont.woff2') format('woff2'),
+         url('/fonts/andale-mono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
   font-family: $secondary-font;

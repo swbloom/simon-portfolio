@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 93px 0;
+  padding: 103px 0 82px 0;
+  h2 {
+    line-height: 1.6;
+    padding-bottom: 5px;
+  }
 }
 
 .agencies .subtext {

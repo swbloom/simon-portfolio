@@ -1,5 +1,13 @@
 const app = {};
 
+app.codeFormat = function() {
+  if (hljs) {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  }
+};
+
 app.post = function() {
   const $post = $('article.post');
   const $sections = $('.post-content section');
@@ -33,7 +41,6 @@ app.post = function() {
   });
 
   $tableOfContents.on('mouseleave', 'li', function(){
-    console.log('hovered');
     TweenLite.to($tableOfContents, 1, {
       right: -190,
       ease: Power1.easeInOut,
@@ -77,6 +84,13 @@ app.post = function() {
         </div>
       </li>
     `);
+
+    const $firstPara = ($("#first-paragraph p"));
+    const firstLetter = ($firstPara.text().slice(0,1));
+    const para = ($firstPara.text().slice(1));
+    const dropCap = $("<div class='dropcap'></div>").text(firstLetter);
+    $firstPara.text(para);
+    $(".first-para-text").prepend(dropCap);
 }
 
 app.sticky = function() {
@@ -184,4 +198,5 @@ $(document).ready(() => {
     $('.calendar').length && app.calendar();
     app.masonry();
     app.post();
+    app.codeFormat();
 });

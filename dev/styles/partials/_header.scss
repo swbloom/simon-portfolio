@@ -1,6 +1,6 @@
 
 .hero {
-  padding-top: 55px;
+  padding-top: 51px;
   .stuck & {}
 }
 
@@ -9,9 +9,6 @@
   padding: 18px 0px;
 }
 
-.hero-nav-wrapper {
-
-}
 .hero-content-wrapper {
   display: flex;
   justify-content: space-between;
@@ -54,12 +51,18 @@
   }
 }
 
+.hero-container {
+  border: 10px solid #1C3C46;
+}
+
 .hero-container--internal {
-  height: 534px;
+  // height: 534px;
+  padding-bottom: 151px;
 }
 .hero-container--landing {
-  background: #{$bgGradient}, url('../images/pngs/about-hero-bg.png');
-  height: 100vh;
+  background: #{$bgGradient}, url('../images/pngs/home-hero-bg.png');
+  @include image-2x("../images/pngs/home-hero-bg-2x.png", 1420, 811, true);
+  height: 80vh;
   min-height: 800px;
 }
 
@@ -69,11 +72,20 @@
   background-size: cover;
 }
 
+.hero-container--contact {
+  background: #{$bgGradient}, url('../images/pngs/contact-hero-bg.png');
+  @include image-2x("../images/pngs/contact-hero-bg-2x.png", 1420, 811, true);
+  background-size: cover;
+}
+
 .hero-text-wrapper {
-  padding-top: 61px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 26px;
+  .home & {
+    padding-top: 116px;
+  }
 }
 
 
@@ -88,6 +100,7 @@
 }
 
 .bird-header {
-  width: 75px !important;
-  height: 75px;
+  width: 68px !important;
+  height: 68px;
+  margin-bottom: 7px;
 }

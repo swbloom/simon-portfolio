@@ -1,4 +1,12 @@
-.btn {
+.btn-inner {
+  &:before {
+    content: '';
+    width: 10px;
+    border-top: 1px solid #a8996e;
+    display: block;
+  }
+}
+.btn-outer {
   position: relative;
   width: 160px;
   height: 55px;

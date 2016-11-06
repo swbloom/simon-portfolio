@@ -1,8 +1,28 @@
 .about-wrapper {
-  margin: 93px auto;
+  padding-top: 93px;
+  padding-bottom: 112px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: url('../images/pngs/sacred-geometry-45.png');
+    @include image-2x('../images/pngs/sacred-geometry-45-@2x.png', 162px, 153px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 213px;
+    height: 245px;
+    position: absolute;
+    top: -50px;
+    left: -15%;
+  }
+  .subtext {
+    color: #a8996e;
+    font-size: 1.8rem;
+    line-height: 2.0;
+  }
 }
 .connect {
-  padding-top: 93px;
+  padding-top: 117px;
   display: flex;
   flex-direction: column;
   align-items: center;
