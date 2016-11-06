@@ -1,11 +1,16 @@
 .brief {
   display: flex;
-  justify-content: space-between;
-  padding: 75px 0 42px 0;
+  padding: 0px 0 20px 0;
   font-size: 1.75rem;
   line-height: 1.5;
   color: #4c5256;
+  max-width: 784px;
+  margin: 0 auto;
   font-family: $secondary-font;
+}
+.brief-title {
+  max-width: 60%;
+  display: block;
 }
 
 .brief ul li {
@@ -13,7 +18,15 @@
 }
 
 .brief-column {
-  min-width: 221px;
+  width: 224px;
+  margin-right: 60px;
+  &:last-of-type {
+    margin-right: 0px;
+  }
+  h6 {
+    font-weight: 600;
+    color: #0b2d37;
+  }
 }
 
 .brief-column img {
@@ -25,4 +38,7 @@
   height: 1px;
   border-top: 1px solid #d6d6d6;
   padding-bottom: 28px;
+  & + p {
+    padding-top: 21px;
+  }
 }

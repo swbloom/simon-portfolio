@@ -13,6 +13,10 @@
   font-size: 1.83rem;
   line-height: 1.6;
   color: #a8996e;
+  @media screen and (max-width: $screen-md) {
+     max-width: 50%;
+     text-align: center;
+  }
 }
 
 .agency-rolodex {
@@ -28,5 +32,18 @@
     &:hover {
       filter: grayscale(0%);
     }
+    @media screen and (max-width: $screen-md) {
+      margin-bottom: 20px;
+      &:nth-of-type(odd) {
+        margin-right: 25px;
+      }
+      &:nth-of-type(even) {
+        margin-left: 25px;
+      }
+    }
+  }
+  @media screen and (max-width: $screen-md) {
+    width: 80%;
+    justify-content: center;
   }
 }

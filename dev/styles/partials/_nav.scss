@@ -3,6 +3,15 @@ nav {
   .sticky & {
     padding-bottom: 0px;
   }
+  @media screen and (max-width: $screen-md) {
+    padding-bottom: 0;
+  }
+
+}
+.menu {
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
 }
 nav ul {
   display: flex;
@@ -38,5 +47,12 @@ nav ul li a {
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
+  }
+}
+
+.hamburger {
+  display: none;
+  @media screen and (max-width: $screen-md) {
+    display: block;
   }
 }

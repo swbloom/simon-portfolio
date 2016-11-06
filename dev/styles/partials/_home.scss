@@ -33,7 +33,10 @@
   .columns {
     padding-left: 114px;
     padding-top: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 31px;
+    @media screen and (max-width: $screen-md) {
+      padding-left: 66px;
+    }
   }
   .subtext {
     padding-top: 20px;

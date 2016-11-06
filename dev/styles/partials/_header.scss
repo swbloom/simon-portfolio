@@ -13,6 +13,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: $screen-md) {
+    padding: 0 22px;
+    width: 100%;
+  }
 }
 
 .hero-nav-wrapper.sticky {
@@ -37,6 +41,19 @@
   }
 }
 
+.logo-desktop {
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
+}
+
+.logo-mobile {
+  display: none;
+  @media screen and (max-width: $screen-md) {
+    display: block;
+  }
+}
+
 .hero-nav-wrapper.fixed {
   width: 100%;
   background-color: rgba(11, 44, 55, 0.93);
@@ -51,8 +68,18 @@
   }
 }
 
+.hero-nav-wrapper {
+  @media screen and (max-width: $screen-md) {
+    z-index: 999;
+    display: flex;
+  }
+}
+
 .hero-container {
   border: 10px solid #1C3C46;
+  @media screen and (max-width: $screen-md) {
+    border: 0;
+  }
 }
 
 .hero-container--internal {
@@ -75,6 +102,12 @@
 .hero-container--contact {
   background: #{$bgGradient}, url('../images/pngs/contact-hero-bg.png');
   @include image-2x("../images/pngs/contact-hero-bg-2x.png", 1420, 811, true);
+  background-size: cover;
+}
+
+.hero-container--case {
+  background: #{$bgGradient}, url('../images/pngs/case-hero-bg.png');
+  @include image-2x("../images/pngs/case-hero-bg-2x.png", 1420, 811, true);
   background-size: cover;
 }
 

@@ -11,6 +11,11 @@
   // min-height: 601px;
   padding-top: 48px;
   padding-bottom: 60px;
+  @media screen and (max-width: $screen-md) {
+    flex-wrap: wrap;
+    margin-left: 130px;
+    margin-right: 165px;
+  }
 }
 
 
@@ -21,11 +26,19 @@
   background-repeat: no-repeat;
   background-position: 80% 20%;
   @include image-2x("../images/pngs/work-item1-geometry-2x.png", 392px, 392px, false);
+  @media screen and (max-width: $screen-md) {
+    width: 100%;
+    height: 264px;
+    background-size: contain;
+  }
 }
 
 .portfolio-short-body {
   width: 50%;
   padding-bottom: 60px;
+  @media screen and (max-width: $screen-md) {
+    width: 100%;
+  }
 }
 
 .portfolio-short-outercontainer:nth-of-type(even) .portfolio-short-container {

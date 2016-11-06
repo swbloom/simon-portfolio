@@ -95,6 +95,10 @@ html {
   font-size: 12px;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 .columns {
 	display: flex;
 }

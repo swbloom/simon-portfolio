@@ -157,10 +157,17 @@ h1.article-title {
   margin-top: 89px;
   margin-bottom: 89px;
   text-align: center;
+  color: #4a4a4a;
   h3 {
     font-size: 2.25rem;
     font-style: italic;
+    line-height: 1.5;
   }
+}
+.quote-block-source {
+  font-size: 1.8rem;
+  color: #91B2BE;
+  margin-top: 34px;
 }
 .quote-block-icon {
   width: 124px;
@@ -187,10 +194,13 @@ h1.article-title {
   }
 }
 .quote-block-icon--twitter {
-  margin-top: -10px;
+  position: relative;
+  top: -12px;
+  width: 21px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
   background-color: #fff;
-  width: 10px;
-  margin: -15px auto 0 auto;
 }
 
 .hljs {

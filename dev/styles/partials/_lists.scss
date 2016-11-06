@@ -1,0 +1,44 @@
+ul.diamonds {
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  &:before {
+    position: absolute;
+    height: 96%;
+    content: '';
+    left: 4px;
+    top: 10px;
+    border-left: 1px solid #d9c19b;
+    width: 1px;
+  }
+  li {
+    list-style-type: none;
+    margin-left: 58px;
+    margin-bottom: 33px;
+    position: relative;
+    font-style: italic;
+    font-size: 1.91rem;
+    &:before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      left: -58px;
+      top: 10px;
+      transform: rotate(45deg);
+      background-color: #d9c19b;
+      display: inline-block;
+    }
+  }
+}
+ul.diamonds.diamonds--no-line {
+  margin-top: 31px;
+  margin-bottom: 31px;
+  li {
+    margin-bottom: 17px;
+  }
+  &:before {
+    border: 0;
+  }
+}

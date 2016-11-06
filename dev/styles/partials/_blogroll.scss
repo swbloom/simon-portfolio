@@ -18,6 +18,10 @@
   background-color: #fff;
   margin: 16px 0;
   padding: 65px;
+  @media screen and (max-width: $screen-md) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .blogroll-articles .blogroll-excerpt:first-child {
@@ -32,6 +36,9 @@
     height: 110px;
     display: block;
     content: '';
+    @media screen and (max-width: $screen-md) {
+      right: -15px;
+    }
   }
 }
 

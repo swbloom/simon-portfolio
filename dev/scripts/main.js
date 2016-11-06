@@ -77,6 +77,32 @@ app.post = function() {
       <li>
         <div class="table-of-contents-item">
           <div class="table-of-contents-index table-of-contents-index--twitter">
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+          <svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+              <title>Fill 3</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="simonwbloom-home-V3-@2x" sketch:type="MSArtboardGroup" transform="translate(-569.000000, -4112.000000)" fill="#fff">
+                      <g id="Group-24" sketch:type="MSLayerGroup" transform="translate(-11.000000, 3660.000000)">
+                          <g id="Group-19" sketch:type="MSShapeGroup">
+                              <g id="Group-18">
+                                  <g id="Group-21" transform="translate(457.000000, 277.000000)">
+                                      <g id="Group-14" transform="translate(0.000000, 75.000000)">
+                                          <g id="Group-+-Or,-follow-me-in-the" transform="translate(0.000000, 30.000000)">
+                                              <g id="Group" transform="translate(52.000000, 69.000000)">
+                                                  <path d="M91.767,2.999 C91.002,3.338 90.183,3.567 89.319,3.671 C90.2,3.144 90.875,2.31 91.194,1.313 C90.371,1.8 89.458,2.156 88.488,2.347 C87.709,1.519 86.602,1 85.377,1 C83.025,1 81.116,2.909 81.116,5.264 C81.116,5.597 81.155,5.919 81.226,6.235 C77.687,6.055 74.547,4.36 72.445,1.782 C72.079,2.411 71.868,3.144 71.868,3.926 C71.868,5.4 72.621,6.707 73.765,7.471 C73.065,7.448 72.409,7.257 71.836,6.938 L71.836,6.991 C71.836,9.056 73.303,10.776 75.251,11.167 C74.894,11.266 74.518,11.318 74.13,11.318 C73.855,11.318 73.588,11.292 73.327,11.24 C73.869,12.934 75.442,14.165 77.307,14.2 C75.85,15.344 74.012,16.025 72.015,16.025 C71.672,16.025 71.333,16.002 71,15.964 C72.884,17.175 75.126,17.879 77.53,17.879 C85.369,17.879 89.652,11.385 89.652,5.754 C89.652,5.571 89.65,5.389 89.641,5.203 C90.472,4.604 91.196,3.856 91.767,2.999" id="Fill-3"></path>
+                                              </g>
+                                          </g>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
           </div>
           <div class="table-of-contents-title">
             Tweet this
@@ -97,6 +123,11 @@ app.sticky = function() {
   // Sticky Nav
   const $header = $("header");
   const $nav = $(".hero-nav-wrapper");
+
+  const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+  const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+
+  if (w < 992) return;
 
   const waypoint =  new Waypoint({
     element: $('main'),
