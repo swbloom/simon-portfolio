@@ -4,14 +4,14 @@ head
   meta(charset="UTF-8")
   title Simon W. Bloom / About
   include ./includes/head.pug
-body
+body(id="work")
   header.hero-container.hero-container--internal.hero-container--about
     .hero.wrapper
       .hero-nav-wrapper
         .hero-content-wrapper
           .logo
-            img(src='/public/images/svgs/swb-badge-blog.svg')
-              //- Logo here
+            img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+            img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
           nav
             include ./includes/nav.pug
       .hero-text-wrapper
@@ -29,11 +29,12 @@ body
         .wrapper
           .portfolio-short
             .portfolio-short-body
-              span.portfolio-category Agency Contract
-              h2 Jam3
-              strong Make cool shit- and don't fuck it up.
-              p Jam3 is one of the world's top digital and production design agencies. They specialize in creating highly advanced, experiential works in both the advertising and entertainment industry.
-              button Read on
+              span.portfolio-category Lead Instructor
+              h2 HackerYou
+              strong Snatch the pebble from my hand, grasshopper.
+              p Taking twenty-six students from fledgling students to battle-ready junior developers ready to take on their first professional roles in Toronto's tech vibrant community and beyond.
+              a(class="btn-outer" href="#")
+                .btn-inner Read On
             .portfolio-short-feature
   .portfolio-short-outercontainer
     .portfolio-short-container
@@ -45,16 +46,18 @@ body
               h2 Jam3
               strong Make cool shit- and don't fuck it up.
               p Jam3 is one of the world's top digital and production design agencies. They specialize in creating highly advanced, experiential works in both the advertising and entertainment industry.
-              button Read on
+              a(class="btn-outer" href="#")
+                .btn-inner Read On
   .portfolio-short-outercontainer
     .portfolio-short-container
         .wrapper
           .portfolio-short
             .portfolio-short-body
-              span.portfolio-category Agency Contract
-              h2 Jam3
-              strong Make cool shit- and don't fuck it up.
-              p Jam3 is one of the world's top digital and production design agencies. They specialize in creating highly advanced, experiential works in both the advertising and entertainment industry.
-              button Read on
+              span.portfolio-category A Digital Pilgrimage
+              h2 3 Months, 8 Countries
+              strong Travelling through South East Asia as a Digital Nomad
+              p In 2016, I took a three month sabbatical to deepen my skills as a Front End Developer. So why not do it while exploring the world?
+              a(class="btn-outer" href="#")
+                .btn-inner Read On
             .portfolio-short-feature
   include ./includes/footer.pug

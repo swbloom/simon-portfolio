@@ -4,26 +4,26 @@ head
   meta(charset="UTF-8")
   title Simon W. Bloom / About
   include ./includes/head.pug
-body
+body(id="about")
   header.hero-container.hero-container--internal.hero-container--about
     .hero.wrapper
       .hero-nav-wrapper
         .hero-content-wrapper
           .logo
-            img(src='/public/images/svgs/swb-badge-blog.svg')
-            //- Logo here
+            img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+            img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
           nav
             include ./includes/nav.pug
       .hero-text-wrapper
-        span.hero-subtext Hello there!
-        h1 Welcome
-        span.hero-subtext Thanks for stopping by.
+        span.hero-subtext From fine artist
+        h1 About Me
+        span.hero-subtext To web developer, speaker, & instructor
   main
     .wrapper.about-wrapper
       div.text-wrapper
         .headline-wrapper--about
-          h3 I'm Simon, & I'm happy you've found my little slice of the Internet.
-          p.quote Insert short bio here instead of Monocle ipsum dolor sit amet aNA Shinkansen emerging, Toto liveable punctual Boeing 787 elegant boulevard. Singapore quality of life hub Baggu, lovely uniforms Swiss delightful smart premium Sunspel. Sleepy flat white Shinkansen Scandinavian, airport ryokan ANA.
+          h3 Hi! I'm Simon Bloom, a web-developer, instructor, and speaker.
+          p.quote I'm passionate about creating rigorous, beautiful websites with classic and simple designs. I love inspiring students as a lead instructor at Toronto based web bootcamp <a href="http://www.hackeryou.com/"/>HackerYou</a>. I'm available for public/private workshops and speaking opportunities. Nice to meet you!
           .brief
             .brief-column
               h6 Currently At
@@ -31,26 +31,26 @@ body
               img(src="./images/pngs/currently-at.png")
               p HackerYou
             .brief-column
-              h6 Key Skills
+              h6 Teaching
               span.brief-line
               ul
-                li Front End Development
-                li Analytics
+                li JS Frameworks
+                li Advanced JavaScript
+                li HTML/CSS
                 li WordPress
-                li Theatre Direction
             .brief-column
-              h6 Favorite Things
+              h6 I'm Into
               span.brief-line
               ul
-                li Front End Development
-                li Analytics
-                li WordPress
-                li Theatre Direction
+                li Teaching
+                li Web Development
+                li Public Speaking
+                li (fantasy) Sports
           .columns
-            .column Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem beatae numquam odit nemo praesentium sint amet possimus incidunt laboriosam. Alias voluptatibus, id odio, esse tenetur inventore quaerat eos velit aut.
-            .column Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste illo autem laborum optio, quidem totam quis ullam, ea est magnam nam veniam fugiat, obcaecati inventore quaerat non et. Laboriosam, dolores?
+            .column I work as a lead instructor and developer at the Toronto based bootcamp HackerYou. Here I get to teach students about how awesome and exciting a career in web development can be - I offer guidance on everything from learning to code to interview skills.
+            .column When I'm not at HackerYou, you'll most likely find me travelling, working on a conference talk, preparing to teach at a workshop, or tinkering with my fantasy lineup.
           .connect
             h4 Feel free to e-mail me at connect@simonwbloom.com
-            p.subtext I'm currently considering contract opportunities starting May 2016.
+            p.subtext I'm currently considering speaking and workshop opportunities for 2017.
       include ./includes/availability.pug
   include ./includes/footer.pug

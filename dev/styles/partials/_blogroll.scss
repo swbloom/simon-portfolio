@@ -12,19 +12,33 @@
   flex-direction: column;
   align-items: center;
 }
+.blogroll-link:hover .blogroll-excerpt {
+  border: 5px solid rgba(11, 45, 55, 0.8);
+  &:after {
+    opacity: 0;
+  }
+}
 
 .blogroll-excerpt {
   height: 114px;
   background-color: #fff;
   margin: 16px 0;
   padding: 65px;
+  border: 5px solid transparent;
   @media screen and (max-width: $screen-md) {
     margin-left: 20px;
     margin-right: 20px;
   }
+  @media screen and (max-width: $screen-xs) {
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 
-.blogroll-articles .blogroll-excerpt:first-child {
+.blogroll-articles .blogroll-link:first-child .blogroll-excerpt {
   position: relative;
   &:after {
     background-image: url('../images/svgs/swb-badge-blog.svg');
@@ -36,8 +50,12 @@
     height: 110px;
     display: block;
     content: '';
+    transition: opacity .15s ease-in;
     @media screen and (max-width: $screen-md) {
       right: -15px;
+    }
+    @media screen and (max-width: $screen-xs) {
+      display: none;
     }
   }
 }
@@ -62,11 +80,17 @@
 
 .blogroll-date {
   color: #a8996e;
+  @media screen and (max-width: $screen-xs) {
+    width: 100%;
+  }
 }
 
 .blogroll-length {
   margin: 0 21px;
   color: #b6b6b6;
+  @media screen and (max-width: $screen-xs) {
+    display: none;
+  }
 }
 
 .blogroll-category {
@@ -76,6 +100,9 @@
   color: #b6b6b6;
   letter-spacing: 0.1px;
   text-transform: none;
+  @media screen and (max-width: $screen-xs) {
+    display: none;
+  }
 }
 
 .blogroll-category-single {

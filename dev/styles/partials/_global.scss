@@ -51,6 +51,10 @@ table {
 .wrapper {
 	max-width: 940px;
 	margin: 0 auto;
+	@media screen and (max-width: $screen-md) {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
 }
 
 .text-wrapper {
@@ -64,15 +68,28 @@ main {
 
 .columns {
 	display: flex;
+	@media screen and (max-width: $screen-xs) {
+		flex-wrap: wrap;
+	}
 }
 .column {
 	max-width: 363px;
+	@media screen and (max-width: $screen-xs) {
+		width: 100%;
+		margin-bottom: 33px;
+	}
 }
 .column:first-of-type {
 	margin-right: 28px;
+	@media screen and (max-width: $screen-xs) {
+		margin-right: 0px;
+	}
 }
 .column:nth-of-type(2) {
 	margin-left: 28px;
+	@media screen and (max-width: $screen-xs) {
+		margin-left: 0px;
+	}
 }
 
 .subtext {
@@ -101,4 +118,11 @@ body {
 
 .columns {
 	display: flex;
+}
+
+.tablet-down {
+	display: none;
+	@media screen and (max-width: $screen-md) {
+		display: block;
+	}
 }

@@ -1,6 +1,10 @@
-ul.hamburger
- li Hamburger
+div.hamburger
+  button(class="hamburger hamburger--spin" type="button" id="hamburger")
+    span(class="hamburger-box")
+    span(class="hamburger-inner")
 ul.menu
+  li.tablet-down.badge
+    img(src='/public/images/svgs/swb-badge-blog.svg')
   li
     a(href="/index.html") Home
   li
@@ -11,3 +15,4 @@ ul.menu
     a(href="/contact.html") Contact
   li
     a(href="/blog.html") Blog
+  li.tablet-down Get in touch

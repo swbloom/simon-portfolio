@@ -1,11 +1,22 @@
 const app = {};
 
+var isPage = function(page) {
+  return $('body').is(`#${page}`) || $('body').is(`.${page}`);
+}
+
 app.codeFormat = function() {
-  if (hljs) {
+  if (typeof hljs !== 'undefined') {
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     });
   }
+};
+
+app.hamburger = function() {
+  $("#hamburger").on('click', function(){
+    $(this).toggleClass('is-active');
+    $('.menu').toggleClass('toggled');
+  });
 };
 
 app.post = function() {
@@ -124,8 +135,8 @@ app.sticky = function() {
   const $header = $("header");
   const $nav = $(".hero-nav-wrapper");
 
-  const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-  const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+  let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+  let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 
   if (w < 992) return;
 
@@ -224,10 +235,13 @@ app.calendar = function() {
  });
 }
 
+
+
 $(document).ready(() => {
     app.sticky();
     $('.calendar').length && app.calendar();
     app.masonry();
     app.post();
     app.codeFormat();
+    app.hamburger();
 });

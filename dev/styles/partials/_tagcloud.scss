@@ -1,6 +1,9 @@
 .tagcloud {
   display: flex;
   margin: 56px 0px;
+  @media screen and (max-width: $screen-sm) {
+    display: none;
+  }
 }
 
 .tag {

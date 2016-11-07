@@ -1,12 +1,6 @@
-.btn-inner {
-  &:before {
-    content: '';
-    width: 10px;
-    border-top: 1px solid #a8996e;
-    display: block;
-  }
-}
+
 .btn-outer {
+  display: inline-block;
   position: relative;
   width: 160px;
   height: 55px;
@@ -18,14 +12,12 @@
   text-transform: uppercase;
   letter-spacing: 2.8px;
   color: #fff;
-  &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 172px;
-    height: 67px;
-    border: 1.5px solid #a8996e;
-    top: -8px;
-    left: -8px;
-  }
+  text-decoration: none;
+}
+
+.btn-inner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }

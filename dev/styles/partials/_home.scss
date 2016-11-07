@@ -5,6 +5,9 @@
   font-size: 4.5rem;
   letter-spacing: 4px;
   text-shadow: 3px 3px #a8996e;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 2.9rem;
+  }
 }
 
 .home-subtext {
@@ -14,6 +17,11 @@
   color: #a8996e;
   letter-spacing: 4px;
   line-height: 2.2;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.06rem;
+    text-align: center;
+    letter-spacing: 2px;
+  }
 }
 
 .location {
@@ -23,6 +31,9 @@
   font-style: italic;
   letter-spacing: 0.3px;
   color: #8da0a6;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.36rem;
+  }
 }
 
 .latest-work {
@@ -37,6 +48,9 @@
     @media screen and (max-width: $screen-md) {
       padding-left: 66px;
     }
+    @media screen and (max-width: $screen-xs) {
+      padding-left: 0px;
+    }
   }
   .subtext {
     padding-top: 20px;
@@ -44,11 +58,19 @@
     display: block;
     color: #a8996e;
   }
+  .wrapper {
+    @media screen and (max-width: $screen-xs) {
+      margin: 0;
+    }
+  }
 }
 
 .latest-work-column-right {
   padding-top: 135px;
   margin-left: -78px;
+  @media screen and (max-width: $screen-xs) {
+    margin-left: -200px;
+  }
   h2, span {
     line-height: 1;
   }

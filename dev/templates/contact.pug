@@ -7,14 +7,14 @@ html(lang="en")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
     script(src="/scripts/vendor/moment.min.js")
     script(src="/scripts/vendor/clndr.min.js")
-  body(class="contact")
+  body(id="contact")
     header.hero-container.hero-container--internal.hero-container--contact
       .hero.wrapper
         .hero-nav-wrapper
           .hero-content-wrapper
             .logo
-              img(src='/public/images/svgs/swb-badge-blog.svg')
-              //- Logo here
+              img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+              img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
             nav
               include ./includes/nav.pug
         .hero-text-wrapper
@@ -24,8 +24,8 @@ html(lang="en")
     main
       .wrapper
         .headline-wrapper.text-wrapper
-          h3 I take on contract work with great agencies, as well as the occasional freelance project.
-          p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt saepe, ipsam eos illo quisquam laborum cumque a ad esse, placeat, culpa officia aut laboriosam, excepturi doloribus necessitatibus minima alias modi?
+          h3 I take on contract work with great agencies and am always on the lookout for speaking and teaching opportunities.
+          p.quote In Toronto and abroad, I love tackling challenging projects, inspiring students, and learning and sharing new technologies. Got a project, speaking or teaching opportunity you think I might be a good fit for? Don't hesitate to reach out!
     .contact
       .wrapper
         .contact-container
@@ -44,7 +44,7 @@ html(lang="en")
                 label(for="subject") Let's chat about an upcoming
                   select
                     option agency contract
-                    option freelance project
+                    option teaching opportunity
                     option speaking opportunity
               .form-row
                 label(for="details") Here are the details:
