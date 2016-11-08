@@ -1,12 +1,14 @@
-.home-headline {
+h1.home-headline {
   padding-top: 20px;
   padding-bottom: 35px;
   font-family: $logo-font;
   font-size: 4.5rem;
   letter-spacing: 4px;
   text-shadow: 3px 3px #a8996e;
-  @media screen and (max-width: $screen-xs) {
+  @media screen and (max-width: $screen-md) {
     font-size: 2.9rem;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 }
 
@@ -17,7 +19,7 @@
   color: #a8996e;
   letter-spacing: 4px;
   line-height: 2.2;
-  @media screen and (max-width: $screen-xs) {
+  @media screen and (max-width: $screen-md) {
     font-size: 1.06rem;
     text-align: center;
     letter-spacing: 2px;
@@ -31,7 +33,7 @@
   font-style: italic;
   letter-spacing: 0.3px;
   color: #8da0a6;
-  @media screen and (max-width: $screen-xs) {
+  @media screen and (max-width: $screen-md) {
     font-size: 1.36rem;
   }
 }
@@ -50,6 +52,8 @@
     }
     @media screen and (max-width: $screen-xs) {
       padding-left: 0px;
+      padding-top: 52px;
+      padding-bottom: 57px;
     }
   }
   .subtext {
@@ -57,6 +61,10 @@
     padding-left: 2px;
     display: block;
     color: #a8996e;
+    @media screen and (max-width: $screen-xs) {
+      font-size: 1.4rem;
+      padding-top: 10px;
+    }
   }
   .wrapper {
     @media screen and (max-width: $screen-xs) {
@@ -64,12 +72,21 @@
     }
   }
 }
-
+.latest-work-column-left {
+  @media screen and (max-width: $screen-xs) {
+    width: 200px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
 .latest-work-column-right {
   padding-top: 135px;
   margin-left: -78px;
   @media screen and (max-width: $screen-xs) {
-    margin-left: -200px;
+    // margin-left: -200px;
+    padding-top: 62px;
   }
   h2, span {
     line-height: 1;
@@ -78,4 +95,38 @@
 
 .latest-work h2 {
   color: #fff;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.66rem;
+    letter-spacing: 3px;
+  }
+}
+.latest-work-proportion {
+  @media screen and (max-width: $screen-xs) {
+    width: 167px;
+  }
+}
+.home {
+  .portfolio-short {
+    @media screen and (max-width: $screen-md) {
+      position: relative;
+    }
+  }
+  .portfolio-short-feature {
+    @media screen and (max-width: $screen-md) {
+      display: none;
+    }
+  }
+  .portfolio-short-mobile-image {
+    display: none;
+    @media screen and (max-width: $screen-md) {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    @media screen and (max-width: $screen-xs) {
+      bottom: -35%;
+      left: 0;
+    }
+  }
 }

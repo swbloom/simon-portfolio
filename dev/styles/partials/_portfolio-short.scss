@@ -3,8 +3,32 @@
   padding-bottom: 73px;
   background-color: #0b2d37;
 }
-.portfolio-short-container {
+.portfolio-short-outercontainer:nth-of-type(1) .portfolio-short-container {
   background-image: #{$bgGradient}, url(../images/pngs/work-item1-bg.png);
+  .portfolio-short-feature {
+    background-image: url(../images/pngs/work-item1-geometry.png);
+    background-repeat: no-repeat;
+    background-position: 80% 20%;
+    @include image-2x("../images/pngs/work-item1-geometry-2x.png", 392px, 392px, false);
+  }
+}
+.portfolio-short-outercontainer:nth-of-type(2) .portfolio-short-container {
+  background-image: #{$bgGradient}, url(../images/pngs/work-item2-bg.png);
+  .portfolio-short-feature {
+    background-image: url(../images/pngs/work-item2-geometry.png);
+    background-repeat: no-repeat;
+    background-position: 40% 50%;
+    @include image-2x("../images/pngs/work-item2-geometry-2x.png", 392px, 392px, false);
+  }
+}
+.portfolio-short-outercontainer:nth-of-type(3) .portfolio-short-container {
+  background-image: #{$bgGradient}, url(../images/pngs/work-item3-bg.png);
+  .portfolio-short-feature {
+    background-image: url(../images/pngs/work-item3-geometry.png);
+    background-repeat: no-repeat;
+    background-position: 80% 20%;
+    @include image-2x("../images/pngs/work-item3-geometry-2x.png", 392px, 392px, false);
+  }
 }
 .portfolio-short {
   display: flex;
@@ -17,8 +41,15 @@
     margin-right: 165px;
   }
   @media screen and (max-width: $screen-xs) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  p {
+    @media screen and (max-width: $screen-xs) {
+      text-align: left;
+    }
   }
 }
 
@@ -26,9 +57,9 @@
 
 .portfolio-short-feature {
   width: 50%;
-  background-image: url(../images/pngs/work-item1-geometry.png);
-  background-repeat: no-repeat;
-  background-position: 80% 20%;
+  // background-image: url(../images/pngs/work-item1-geometry.png);
+  // background-repeat: no-repeat;
+  // background-position: 80% 20%;
   @include image-2x("../images/pngs/work-item1-geometry-2x.png", 392px, 392px, false);
   @media screen and (max-width: $screen-md) {
     width: 100%;

@@ -2,6 +2,14 @@
 .hero {
   padding-top: 51px;
   .stuck & {}
+  .home & {
+    @media screen and (max-width: $screen-md) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  }
 }
 
 .hero h1 {
@@ -83,6 +91,12 @@
   @media screen and (max-width: $screen-md) {
     border: 0;
   }
+  @media screen and (max-width: $screen-xs) {
+    .wrapper {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .hero-container--internal {
@@ -124,6 +138,10 @@
   padding-top: 26px;
   .home & {
     padding-top: 116px;
+    @media screen and (max-width: $screen-md) {
+      padding-top: 0px;
+      padding-bottom: 150px;
+    }
   }
 }
 
@@ -142,4 +160,8 @@
   width: 68px !important;
   height: 68px;
   margin-bottom: 7px;
+  @media screen and (max-width: $screen-md) {
+    width: 50px !important;
+    margin-bottom: 0px;
+  }
 }

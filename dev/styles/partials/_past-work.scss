@@ -1,0 +1,63 @@
+.past-work {
+  display: flex;
+  @media screen and (max-width: $screen-md) {
+    flex-wrap: wrap;
+  }
+  .past-work-column {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border-top: 17px solid rgba(11, 45, 55, 0.9);
+    border-bottom: 17px solid rgba(11, 45, 55, 0.9);
+    background-color: rgba(11, 45, 55, 0.9);
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+    }
+  }
+  .past-work-column:first-of-type {
+    text-align: right;
+    padding-right: 60px;
+    background: #{$bgGradient}, url('../images/jpgs/hy.jpg');
+    background-position: center center;
+    @media screen and (max-width: $screen-md) {
+      background-size: cover;
+    }
+    .past-work-details {
+      margin-left: 81px;
+    }
+    .past-work-arrow {
+      margin-left: auto;
+    }
+  }
+  .past-work-column:last-of-type {
+    padding-left: 60px;
+    background: #{$bgGradient}, url('../images/jpgs/jam3.jpg');
+    background-position: center center;
+    .past-work-details {
+      margin-right: 153px;
+    }
+    @media screen and (max-width: $screen-md) {
+      background-size: cover;
+    }
+  }
+  .portfolio-category {
+    margin-top: 141px;
+    margin-bottom: 26px;
+  }
+  h4 {
+    font-family: $heading-font;
+    font-size: 4.16rem;
+    line-height: 1;
+    letter-spacing: 7.1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .subtext {
+    font-size: 1.5rem;
+    color: #8da0a6;
+    letter-spacing: 0.1px;
+    margin-bottom: 147px;
+  }
+}

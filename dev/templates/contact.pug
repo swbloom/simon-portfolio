@@ -7,6 +7,7 @@ html(lang="en")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
     script(src="/scripts/vendor/moment.min.js")
     script(src="/scripts/vendor/clndr.min.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDauM3L5IfUlDIGWihKR3MooCPnEnG3WhA")
   body(id="contact")
     header.hero-container.hero-container--internal.hero-container--contact
       .hero.wrapper
@@ -22,7 +23,7 @@ html(lang="en")
           h1 Get in Touch
           span.hero-subtext I'd love to hear from you
     main
-      .wrapper
+      .wrapper.contact-wrapper
         .headline-wrapper.text-wrapper
           h3 I take on contract work with great agencies and am always on the lookout for speaking and teaching opportunities.
           p.quote In Toronto and abroad, I love tackling challenging projects, inspiring students, and learning and sharing new technologies. Got a project, speaking or teaching opportunity you think I might be a good fit for? Don't hesitate to reach out!
@@ -49,8 +50,13 @@ html(lang="en")
               .form-row
                 label(for="details") Here are the details:
                   textarea
-              button Submit
+              button.btn-submit Submit
           .contact-calendar
             h3 Let me check my schedule...
             .calendar
+    <section id="cd-google-map">
+      <div id="google-container"></div>
+      <div id="cd-zoom-in"></div>
+      <div id="cd-zoom-out"></div>
+    </section>
     include ./includes/footer.pug

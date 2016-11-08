@@ -1,7 +1,30 @@
+.blog-wrapper {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: url('../images/pngs/sacred-geometry-large.png');
+    @include image-2x('../images/pngs/sacred-geometry-large-@2x.png', 213px, 245px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 213px;
+    height: 245px;
+    position: absolute;
+    top: -50px;
+    left: -190px;
+  }
+}
 .blogroll {
   background-color: #f4f4ef;
   padding-top: 133px;
   padding-bottom: 125px;
+  @media screen and (max-width: $screen-md) {
+    padding-top: 125px;
+  }
+  @media screen and (max-width: $screen-xs) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
 }
 
 .blogroll-articles {
@@ -20,21 +43,23 @@
 }
 
 .blogroll-excerpt {
-  height: 114px;
+  // height: 114px;
   background-color: #fff;
+  // width: 100%;
+  right: 0;
   margin: 16px 0;
   padding: 65px;
   border: 5px solid transparent;
   @media screen and (max-width: $screen-md) {
     margin-left: 20px;
     margin-right: 20px;
+    text-align: center;
   }
   @media screen and (max-width: $screen-xs) {
     margin-left: 0;
     margin-right: 0;
     height: auto;
     margin-bottom: 10px;
-    text-align: center;
   }
 }
 
@@ -80,7 +105,7 @@
 
 .blogroll-date {
   color: #a8996e;
-  @media screen and (max-width: $screen-xs) {
+  @media screen and (max-width: $screen-md) {
     width: 100%;
   }
 }
@@ -88,7 +113,7 @@
 .blogroll-length {
   margin: 0 21px;
   color: #b6b6b6;
-  @media screen and (max-width: $screen-xs) {
+  @media screen and (max-width: $screen-md) {
     display: none;
   }
 }
@@ -100,7 +125,7 @@
   color: #b6b6b6;
   letter-spacing: 0.1px;
   text-transform: none;
-  @media screen and (max-width: $screen-xs) {
+  @media screen and (max-width: $screen-md) {
     display: none;
   }
 }
@@ -111,6 +136,10 @@
 
 .blogroll h2 {
   font-size: 2.9rem;
+  @media screen and (max-width: $screen-md) {
+    font-size: 2rem;
+    letter-spacing: 2.5px;
+  }
 }
 
 .blogroll .subtext {
@@ -118,4 +147,14 @@
   line-height: 1;
   font-size: 1.8rem;
   padding-bottom: 16px;
+  @media screen and (max-width: $screen-md) {
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+  }
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.41rem;
+    letter-spacing: 0;
+    padding-top: 0;
+    padding-bottom: 28px;
+  }
 }
