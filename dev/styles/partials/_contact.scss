@@ -4,11 +4,17 @@
   .headline-wrapper .quote {
     margin-top: 56px;
     display: block;
+    @media screen and (max-width: $screen-xs) {
+      margin-top: 0px;
+    }
   }
   .headline-wrapper {
     padding-bottom: 80px;
     @media screen and (max-width: $screen-md) {
       padding-bottom: 40px;
+    }
+    @media screen and (max-width: $screen-xs) {
+      padding-top: 65px;
     }
     h3 {
       line-height: 1.3;
@@ -21,6 +27,9 @@
 .contact {
   background-color: #fbfbf9;
   padding-bottom: 93px;
+  @media screen and (max-width: $screen-xs) {
+    padding-bottom: 0px;
+  }
   .wrapper {
     @media screen and (max-width: $screen-md) {
       margin-left: 0px;
@@ -41,6 +50,13 @@
   min-width: 520px;
   @media screen and (max-width: $screen-md) {
     padding-bottom: 87px;
+  }
+  @media screen and (max-width: $screen-xs) {
+    padding-top: 47px;
+    padding-bottom: 47px;
+    font-size: 1.2rem;
+    line-height: 1;
+    min-width: auto;
   }
 }
 .contact-calendar {

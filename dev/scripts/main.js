@@ -15,7 +15,16 @@ app.codeFormat = function() {
 app.hamburger = function() {
   $("#hamburger").on('click', function(){
     $(this).toggleClass('is-active');
-    $('.menu').toggleClass('toggled');
+    const active = $('.menu').hasClass('toggled');
+
+    if (active) {
+      $('.menu').fadeOut(function(){
+        $(this).removeClass('toggled').attr('style', '');
+      });
+    } else {
+      $('.menu').toggleClass('toggled').fadeIn().css('display', 'flex');
+    }
+
   });
 };
 

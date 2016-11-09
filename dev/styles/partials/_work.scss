@@ -1,8 +1,11 @@
 #work {
   .portfolio-short {
     @media screen and (max-width: $screen-md) {
-      margin-left: 0;
-      margin-right: 0;
+      // margin-left: 0;
+      // margin-right: 0;
+      position: relative;
     }
+  }
+  .portfolio-short-body {
   }
 }

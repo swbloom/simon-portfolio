@@ -116,17 +116,4 @@ h1.home-headline {
       display: none;
     }
   }
-  .portfolio-short-mobile-image {
-    display: none;
-    @media screen and (max-width: $screen-md) {
-      display: inline-block;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-    @media screen and (max-width: $screen-xs) {
-      bottom: -35%;
-      left: 0;
-    }
-  }
 }

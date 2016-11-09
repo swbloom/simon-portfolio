@@ -1,12 +1,19 @@
 #about {
   .brief {
     margin-top: 79px;
+    @media screen and (max-width: $screen-xs) {
+      margin-top: 40px;
+    }
   }
 }
 .about-wrapper {
   padding-top: 93px;
   padding-bottom: 112px;
   position: relative;
+  @media screen and (max-width: $screen-xs) {
+    padding-top: 58px;
+    padding-bottom: 42px;
+  }
   &:after {
     content: '';
     display: block;
@@ -39,6 +46,7 @@
   }
   @media screen and (max-width: $screen-xs) {
     overflow: hidden;
+    padding-top: 30px;
     h4 {
       font-size: 1.8rem;
     }

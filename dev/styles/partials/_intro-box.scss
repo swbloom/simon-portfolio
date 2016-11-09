@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  @media screen and (max-width: $screen-xs) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 .intro-box-body {
   max-width: 421px;
@@ -15,6 +19,9 @@
     text-align: center;
     width: 100%;
   }
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.4rem;
+  }
 }
 .intro-box-body strong {
   font-family: $secondary-font;
@@ -22,6 +29,9 @@
   line-height: 1.8;
   font-style: italic;
   color: #a8996e;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.4rem;
+  }
 
 }
 .intro-box-featured {
@@ -30,5 +40,10 @@
     width: 100%;
     text-align: center;
     margin-bottom: 33px;
+  }
+  @media screen and (max-width: $screen-xs) {
+    img {
+      width: 50%;
+    }
   }
 }

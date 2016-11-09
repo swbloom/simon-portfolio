@@ -102,6 +102,9 @@
 .hero-container--internal {
   // height: 534px;
   padding-bottom: 151px;
+  @media screen and (max-width: $screen-xs) {
+    padding-bottom: 70px;
+  }
 }
 .hero-container--landing {
   background: #{$bgGradient}, url('../images/pngs/home-hero-bg.png');
@@ -154,6 +157,9 @@
   font-style: italic;
   line-height: 3.1;
   letter-spacing: 0.4px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.3rem;
+  }
 }
 
 .bird-header {

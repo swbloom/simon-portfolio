@@ -14,19 +14,19 @@ nav {
   }
 }
 .menu.toggled {
-  display: block;
   position: fixed;
   top: 0;
   width: 100%;
   left: 0;
   height: calc(100vh - 58px);
   background-color: rgba(11, 45, 55, 0.97);
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 15px;
+  opacity: 1;
   li {
     margin-bottom: 12px;
   }

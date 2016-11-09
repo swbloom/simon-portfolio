@@ -84,6 +84,7 @@ main {
 	max-width: 363px;
 	@media screen and (max-width: $screen-xs) {
 		width: 100%;
+		font-size: 1.4rem;
 		margin-bottom: 33px;
 	}
 }

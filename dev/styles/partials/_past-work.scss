@@ -14,6 +14,11 @@
       width: 100%;
     }
   }
+  .past-work-arrow{
+    @media screen and (max-width: $screen-xs) {
+      display: none;
+    }
+  }
   .past-work-column:first-of-type {
     text-align: right;
     padding-right: 60px;
@@ -24,6 +29,9 @@
     }
     .past-work-details {
       margin-left: 81px;
+      @media screen and (max-width: $screen-xs) {
+        margin-left: 33px;
+      }
     }
     .past-work-arrow {
       margin-left: auto;
@@ -35,14 +43,23 @@
     background-position: center center;
     .past-work-details {
       margin-right: 153px;
+      @media screen and (max-width: $screen-xs) {
+        margin-right: 33px;
+      }
     }
     @media screen and (max-width: $screen-md) {
       background-size: cover;
+    }
+    @media screen and (max-width: $screen-xs) {
+      padding-left: 33px;
     }
   }
   .portfolio-category {
     margin-top: 141px;
     margin-bottom: 26px;
+    @media screen and (max-width: $screen-xs) {
+      margin-bottom: 0px;
+    }
   }
   h4 {
     font-family: $heading-font;
@@ -53,11 +70,20 @@
     font-weight: 600;
     color: #fff;
     margin-bottom: 10px;
+    @media screen and (max-width: $screen-xs) {
+      font-size: 3rem;
+      text-align: left;
+      letter-spacing: 5px;
+    }
   }
   .subtext {
     font-size: 1.5rem;
     color: #8da0a6;
     letter-spacing: 0.1px;
     margin-bottom: 147px;
+    @media screen and (max-width: $screen-xs) {
+      text-align: left;
+      line-height: 1.4;
+    }
   }
 }

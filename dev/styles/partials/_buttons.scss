@@ -34,4 +34,7 @@
   letter-spacing: 2.8px;
   height: 48px;
   margin-top: 28px;
+  @media screen and (max-width: $screen-xs) {
+    width: 100%;
+  }
 }

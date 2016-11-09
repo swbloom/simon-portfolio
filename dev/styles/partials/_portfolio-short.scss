@@ -64,18 +64,34 @@
   @media screen and (max-width: $screen-md) {
     width: 100%;
     height: 264px;
+    display: none;
     background-size: contain;
   }
   @media screen and (max-width: $screen-xs) {
     background-position: center center;
   }
 }
-
+.portfolio-short-mobile-image {
+  display: none;
+  @media screen and (max-width: $screen-md) {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media screen and (max-width: $screen-xs) {
+    bottom: -35%;
+    left: 0;
+  }
+}
 .portfolio-short-body {
   width: 50%;
   padding-bottom: 60px;
   @media screen and (max-width: $screen-md) {
     width: 100%;
+  }
+  @media screen and (max-width: $screen-xs) {
+
   }
   p:last-of-type {
     margin-bottom: 46px;
@@ -143,7 +159,7 @@
   margin-bottom: 33px;
   text-transform: uppercase;
   @media screen and (max-width: $screen-xs) {
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
   }
 }
