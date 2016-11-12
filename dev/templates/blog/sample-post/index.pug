@@ -14,8 +14,9 @@ body(class="post-single")
       .hero-nav-wrapper
         .hero-content-wrapper
           .logo
-            img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
-            img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
+            a(href="/")
+              img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+              img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
           nav
             include /includes/nav.pug
       .hero-text-wrapper
@@ -32,11 +33,11 @@ body(class="post-single")
         h1.post-title.article-content-wrap= postTitle
         p.post-summary= postSummary
         div.post-content
-          section(data-section="Introduction" id="first-paragraph")
+          section(data-section="Introduction")
             h2.article-content-wrap Introduction
             div.first-para-text.para-text
               p Vanessa ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               div.image-block
                 img(src="/images/pngs/blog-trello.png")
               .image-block-caption

@@ -2,8 +2,13 @@
   position: absolute;
   right: -190px;
   top: 100px;
+  z-index: 9;
   @media screen and (max-width: $screen-md) {
     display: none;
+  }
+  a {
+    text-decoration: none;
+    color: #4c5256;
   }
 }
 

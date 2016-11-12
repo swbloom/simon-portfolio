@@ -16,13 +16,16 @@ app.hamburger = function() {
   $("#hamburger").on('click', function(){
     $(this).toggleClass('is-active');
     const active = $('.menu').hasClass('toggled');
-
     if (active) {
+      $('body').css('position', 'static');
+      $('.logo').animate({opacity: 1});
       $('.menu').fadeOut(function(){
         $(this).removeClass('toggled').attr('style', '');
       });
     } else {
-      $('.menu').toggleClass('toggled').fadeIn().css('display', 'flex');
+      $('body').css('position', 'fixed');
+      $('.logo').animate({opacity: 0});
+      $('.menu').toggleClass('toggled').fadeIn().css('display', 'block');
     }
 
   });
@@ -71,6 +74,8 @@ app.post = function() {
 
   $sections.each(function(index){
     const sectionName = $(this).data('section');
+    const trimmed = $.trim(sectionName.toLowerCase().replace(/ /g,''));
+    $(this).attr('id', trimmed);
     let waypoint = new Waypoint({
       element: $(this),
       handler: function(direction) {
@@ -86,7 +91,7 @@ app.post = function() {
             ${index}
           </div>
           <div class="table-of-contents-title">
-            ${sectionName}
+            <a href="#${trimmed}">${sectionName}</a>
           </div>
         </div>
       </li>
@@ -131,7 +136,7 @@ app.post = function() {
       </li>
     `);
 
-    const $firstPara = ($("#first-paragraph p"));
+    const $firstPara = ($(".first-para-text p"));
     const firstLetter = ($firstPara.text().slice(0,1));
     const para = ($firstPara.text().slice(1));
     const dropCap = $("<div class='dropcap'></div>").text(firstLetter);
@@ -154,7 +159,7 @@ app.sticky = function() {
         let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 
         if (w < 992) return;
-        let $navClone = $nav.clone().addClass('nav-clone');
+        let $navClone = $nav.clone(true).addClass('nav-clone');
         $navClone.insertAfter($nav);
         $('body').addClass('stuck');
         $nav.addClass('sticky');
@@ -256,8 +261,8 @@ app.googleMap = function() {
 
   if (!isPage('contact')) return;
   //set your google maps parameters
-	var $latitude = 51.5255069,
-		$longitude = -0.0836207,
+	var $latitude = 43.6483,
+		$longitude = -79.3979,
 		$map_zoom = 14;
 
 	//google map custom marker icon - .png fallback for IE11
@@ -486,7 +491,42 @@ app.googleMap = function() {
   	map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 }
 
+app.contactForm = function() {
+  if (isPage('contact')) {
+    var $form = $('form');
+    $form.on('submit', function(e){
+      e.preventDefault();
+      const formData = $(this).serialize();
+      $.ajax({
+        type: 'POST',
+        url: $form.attr('action'),
+        data: formData
+      }).done(function(response){
+        $("#name").val("");
+        $("#email").val("");
+        $("#details").val("");
+        $('.message').text('Thanks for your message! You should hear back within 24 hours.');
+      }).fail(function(data){
+        $('.message').text('Oops! An error occured and your message could not be sent.');
+      });
+    });
+  };
+}
 
+app.smoothScroll = function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 100
+        }, 1000);
+        return false;
+      }
+    }
+  });
+}
 
 $(document).ready(() => {
     app.sticky();
@@ -496,4 +536,6 @@ $(document).ready(() => {
     app.codeFormat();
     app.hamburger();
     app.googleMap();
+    app.contactForm();
+    app.smoothScroll();
 });

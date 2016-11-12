@@ -2,8 +2,8 @@
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Simon W. Bloom / Contact
     include ./includes/head.pug
+    title Simon W. Bloom / Contact
     script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
     script(src="/scripts/vendor/moment.min.js")
     script(src="/scripts/vendor/clndr.min.js")
@@ -14,8 +14,9 @@ html(lang="en")
         .hero-nav-wrapper
           .hero-content-wrapper
             .logo
-              img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
-              img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
+              a(href="/")
+                img(src='/public/images/svgs/swb-badge-blog.svg' alt='a small paper crane').logo-desktop
+                img(src='/public/images/svgs/swb-mobile-logo.svg' alt='a small paper crane').logo-mobile
             nav
               include ./includes/nav.pug
         .hero-text-wrapper
@@ -32,25 +33,26 @@ html(lang="en")
         .contact-container
           .contact-form
             h3 Get in touch.
-            form
+            form(action='mailer.php' method='post')
               .form-row
                 label(for="name") Hi there! My name is
-                  input(type="text" id="name" placeholder="Type your name here")
+                  input(type="text" id="name" name="name" placeholder="Type your name here" value="")
                   |.
               .form-row
                 label(for="email") You can e-mail me at
-                  input(type="text" id="email" placeholder="You@awesomeinc.io")
+                  input(type="text" name="email" id="email" placeholder="You@awesomeinc.io" value="")
                   |.
               .form-row
-                label(for="subject") Let's chat about an upcoming
-                  select
+                label(for="about") Let's chat about an upcoming
+                  select(name="about")
                     option agency contract
                     option teaching opportunity
                     option speaking opportunity
               .form-row
                 label(for="details") Here are the details:
-                  textarea
+                  textarea(name="details" id="details")
               button.btn-submit Submit
+              p.message
           .contact-calendar
             h3 Let me check my schedule...
             .calendar

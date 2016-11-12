@@ -11,6 +11,8 @@ const injectSvg     = require('gulp-inject-svg');
 const sourcemaps    = require('gulp-sourcemaps');
 const plumber       = require('gulp-plumber');
 const notify        = require('gulp-notify');
+const uglify        = require('gulp-uglify');
+const cleanCSS      = require('gulp-clean-css');
 const reload        = browserSync.reload;
 
 gulp.task('templates', () => {
@@ -35,6 +37,7 @@ gulp.task('styles', () => {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(concat('style.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./public/styles/'))
     .pipe(reload({stream: true}));
 });
@@ -45,6 +48,7 @@ gulp.task('scripts', () => {
     .pipe(babel({
       presets: ['es2015']
     }))
+    .pipe(uglify())
     .pipe(gulp.dest('./public/scripts'))
     .pipe(reload({stream: true}));
 });

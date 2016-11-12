@@ -5,24 +5,29 @@
 }
 .portfolio-short-outercontainer:nth-of-type(1) .portfolio-short-container {
   background-image: #{$bgGradient}, url(../images/pngs/work-item1-bg.png);
+  background-size: cover;
   .portfolio-short-feature {
     background-image: url(../images/pngs/work-item1-geometry.png);
     background-repeat: no-repeat;
     background-position: 80% 20%;
     @include image-2x("../images/pngs/work-item1-geometry-2x.png", 392px, 392px, false);
+
   }
 }
 .portfolio-short-outercontainer:nth-of-type(2) .portfolio-short-container {
   background-image: #{$bgGradient}, url(../images/pngs/work-item2-bg.png);
+  background-size: cover;
   .portfolio-short-feature {
     background-image: url(../images/pngs/work-item2-geometry.png);
     background-repeat: no-repeat;
     background-position: 40% 50%;
     @include image-2x("../images/pngs/work-item2-geometry-2x.png", 392px, 392px, false);
+
   }
 }
 .portfolio-short-outercontainer:nth-of-type(3) .portfolio-short-container {
   background-image: #{$bgGradient}, url(../images/pngs/work-item3-bg.png);
+  background-size: cover;
   .portfolio-short-feature {
     background-image: url(../images/pngs/work-item3-geometry.png);
     background-repeat: no-repeat;
@@ -41,8 +46,8 @@
     margin-right: 165px;
   }
   @media screen and (max-width: $screen-xs) {
-    margin-left: 45px;
-    margin-right: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     word-wrap: break-word;
   }
@@ -80,8 +85,14 @@
     right: 0;
   }
   @media screen and (max-width: $screen-xs) {
-    bottom: -35%;
+    #work & {
+      display: none;
+    }
+    bottom: -30%;
     left: 0;
+    img {
+      max-width: 100%;
+    }
   }
 }
 .portfolio-short-body {
@@ -97,7 +108,12 @@
     margin-bottom: 46px;
   }
 }
-
+.portfolio-short-outercontainer:nth-of-type(even) {
+  .portfolio-short-mobile-image {
+    right: auto;
+    left: 0;
+  }
+}
 .portfolio-short-outercontainer:nth-of-type(even) .portfolio-short-container {
   text-align: right;
 }
@@ -117,6 +133,8 @@
   padding-bottom: 5px;
   @media screen and (max-width: $screen-xs) {
     text-align: center;
+    font-size: 3rem;
+    letter-spacing: 4px;
   }
 }
 
@@ -159,7 +177,7 @@
   margin-bottom: 33px;
   text-transform: uppercase;
   @media screen and (max-width: $screen-xs) {
-    text-align: left;
+    text-align: center;
     margin-bottom: 0;
   }
 }

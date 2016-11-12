@@ -1,0 +1,65 @@
+include post-details.pug
+
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Simon W. Bloom / The Picture Element
+  include /includes/head.pug
+  script(src="/scripts/vendor/isotope.pkgd.min.js")
+  script(src="/scripts/vendor/highlight.pack.js")
+body(class="post-single")
+  header.hero-container.hero-container--internal.hero-container--about
+    .hero.wrapper
+      .hero-nav-wrapper
+        .hero-content-wrapper
+          .logo
+            a(href='/')
+              img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+              img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
+          nav
+            include /includes/nav.pug
+      .hero-text-wrapper
+        h1.article-title= articleName
+        div.article-details
+          p.article-length= articleLength
+          p.article-published= articlePublished
+  main
+    include /includes/table-of-contents.pug
+    .wrapper.blog-wrapper
+      article.post
+        .post-filed-under Filed Under:
+          div.post-tags= postTags
+        h1.post-title.article-content-wrap= postTitle
+        p.post-summary= postSummary
+        div.post-content
+          section(data-section="Introduction" id="first-paragraph")
+            h2.article-content-wrap Introduction
+            div.first-para-text.para-text
+              p Supporting retina devices means making sure we are serving 2x images to screens with double the pixel density. In the past, this has proven to be a pain point for developers, who have either chosen to needlessly serve high resolution images to non-retina devices (bad for performance), or used background images and media queries to swap images (bad for accessibility).
+          section(data-section="The Solution")
+            h2.article-content-wrap The Solution
+            div.para-text
+              p Enter the <code>&lt;picture&gt;</code> element. At its most basic, it looks like this:
+            pre
+              code.html
+                |&lt;picture&gt;
+                |  &lt;img src="circle.png" alt="a round white circle"&gt;
+                |&lt;/picture&gt;
+            div.para-text
+              p It starts with just a wrapper around our image that, on it's own, doesn't do anything.
+            pre
+              code.html
+                |&lt;picture&gt;
+                |  &lt;source srcset="circle-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)"&gt;
+                |  &lt;img src="circle.png" alt="a round white circle"&gt;
+                |&lt;/picture&gt;
+            div.para-text
+              p The <code>&lt;source&gt; element allows us to swap in an alternative image source to use when a certain condition in the "media" attribute is met. In this case, we're targeting devices that have a pixel ratio of 2, and a minimum resolution of 192dpi - two conditions that tip off the browser that the user is on a retina device. If these two conditions are met, 'circle.png' will be swapped out with circle-2x.png and the user will see the retina image instead!
+              p What's really awesome about this is that the retina image will ONLY load if the picture element detects the user is on a retina device. This means faster loading times for non retina devices.
+            section(data-section="Browser Support")
+              h2.article-content-wrap Current Browser Support
+              div.para-text
+                p <code>&lt;picture&gt; and &lt;srcset&gt; are supported in the latest versions of all modern browsers.
+                p There is no support for IE 11 and below, however there is a great polyfill available called <a href="http://scottjehl.github.io/picturefill/">Picturefill</a>.
+  include /includes/footer.pug

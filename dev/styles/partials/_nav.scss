@@ -9,6 +9,7 @@ nav {
 
 }
 .menu {
+  text-align: center;
   @media screen and (max-width: $screen-md) {
     display: none;
   }
@@ -29,10 +30,49 @@ nav {
   opacity: 1;
   li {
     margin-bottom: 12px;
+    @media screen and (max-width: $screen-xs) {
+      margin-bottom: 15px;
+    }
   }
   .badge {
     margin-top: 53px;
     margin-bottom: 80px;
+
+    @media screen and (max-width: $screen-xs) {
+      margin-top: 20px;
+      margin-bottom: 22px;
+      svg {
+        width: 100px;
+      }
+    }
+  }
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (orientation : landscape) {
+    height: calc(100vh - 66px);
+    padding-top: 20px;
+    li {
+      font-size: 16px;
+    }
+    .badge {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      position: absolute;
+      left: -40vw;
+      top: -10px;
+    }
+    .badge svg {
+      width: 80px;
+    }
+    .menu-contact {
+      display: none;
+    }
+  }
+}
+.menu-contact {
+  @media screen and (max-width: $screen-xs) {
+    display: none;
   }
 }
 nav ul {
@@ -45,6 +85,9 @@ nav ul {
 }
 nav ul li {
   width: 119px;
+  @media screen and (max-width: $screen-md) {
+    width: 100%;
+  }
 }
 nav ul li a {
   position: relative;
@@ -77,4 +120,22 @@ nav ul li a {
   @media screen and (max-width: $screen-md) {
     display: block !important;
   }
+}
+
+p.get-in-touch {
+  margin-top: 40px;
+  font-family: $secondary-font;
+  text-transform: none;
+  letter-spacing: 0.6px;
+  font-size: 1.33rem;
+  font-style: italic;
+  color: #8da0a6;
+}
+
+p.email {
+  font-size: 1.33rem;
+  font-family: $secondary-font;
+  text-transform: none;
+  letter-spacing: 0.6px;
+  color: #d9c19b;
 }

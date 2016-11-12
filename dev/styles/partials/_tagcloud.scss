@@ -18,6 +18,9 @@
   border: solid 1.5px #0b2d37;
   margin: 0 12px;
   cursor: pointer;
+  @media screen and (max-width: $screen-md) {
+    margin: 0 6px;
+  }
 }
 
 .tag--active {

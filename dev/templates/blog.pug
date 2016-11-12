@@ -6,13 +6,14 @@ head
   include ./includes/head.pug
   script(src="/scripts/vendor/isotope.pkgd.min.js")
 body
-  header.hero-container.hero-container--internal.hero-container--about
+  header.hero-container.hero-container--internal.hero-container--blog
     .hero.wrapper
       .hero-nav-wrapper
         .hero-content-wrapper
           .logo
-            img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
-            img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
+            a(href="/")
+              img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+              img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
           nav
             include ./includes/nav.pug
       .hero-text-wrapper

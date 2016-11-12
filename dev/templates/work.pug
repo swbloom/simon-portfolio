@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 html(lang="en")
-head
-  meta(charset="UTF-8")
-  title Simon W. Bloom / Work
-  include ./includes/head.pug
-body(id="work")
-  header.hero-container.hero-container--internal.hero-container--about
-    .hero.wrapper
-      .hero-nav-wrapper
-        .hero-content-wrapper
-          .logo
-            img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
-            img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
-          nav
-            include ./includes/nav.pug
-      .hero-text-wrapper
-        span.hero-subtext A collection of projects & contracts
-        h1 Work
-        span.hero-subtext From large agencies to nonprofits
-  main
-    .wrapper
-      .intro-box
-        .intro-box-body I love #[strong long-term contracts]. They allow me to #[strong integrate] with talented teams, meet new people, and collaborate to create amazing digital experiences. I'm flexible, friendly, and love a good #[strong challenge].
-        .intro-box-featured.intro-box-featured--suitcase
-          img(src="./images/pngs/work-briefcase.png")
-  .portfolio-short-outercontainer
-    .portfolio-short-container
-        .wrapper
-          .portfolio-short
-            .portfolio-short-body
-              span.portfolio-category Lead Instructor
-              h2 HackerYou
-              strong Snatch the pebble from my hand, grasshopper.
-              p Taking twenty-six students from fledgling students to battle-ready junior developers ready to take on their first professional roles in Toronto's tech vibrant community and beyond.
-              a(class="btn-outer" href="#")
-                .btn-inner Read On
-              picture.portfolio-short-mobile-image
-                source(srcset="/images/pngs/work-item1-geometry-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
-                img(src="/images/pngs/work-item1-geometry.png" width="264px")
-            .portfolio-short-feature
-  .portfolio-short-outercontainer
-    .portfolio-short-container
-        .wrapper
-          .portfolio-short
-            .portfolio-short-feature
-            .portfolio-short-body
-              span.portfolio-category Agency Contract
-              h2 Jam3
-              strong Make cool shit- and don't fuck it up.
-              p Jam3 is one of the world's top digital and production design agencies. They specialize in creating highly advanced, experiential works in both the advertising and entertainment industry.
-              a(class="btn-outer" href="#")
-                .btn-inner Read On
-              picture.portfolio-short-mobile-image
-                source(srcset="/images/pngs/work-item1-geometry-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
-                img(src="/images/pngs/work-item1-geometry.png" width="264px")
-  .portfolio-short-outercontainer
-    .portfolio-short-container
-        .wrapper
-          .portfolio-short
-            .portfolio-short-body
-              span.portfolio-category A Digital Pilgrimage
-              h2 3 Months, 8 Countries
-              strong Travelling through South East Asia as a Digital Nomad
-              p In 2016, I took a three month sabbatical to deepen my skills as a Front End Developer. So why not do it while exploring the world?
-              a(class="btn-outer" href="#")
-                .btn-inner Read On
-              picture.portfolio-short-mobile-image
-                source(srcset="/images/pngs/work-item1-geometry-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
-                img(src="/images/pngs/work-item1-geometry.png" width="264px")
-            .portfolio-short-feature
-  include ./includes/footer.pug
+  head
+    meta(charset="UTF-8")
+    title Simon W. Bloom / Work
+    include ./includes/head.pug
+  body(id="work")
+    header.hero-container.hero-container--internal.hero-container--work
+      .hero.wrapper
+        .hero-nav-wrapper
+          .hero-content-wrapper
+            .logo
+              a(href="/")
+                img(src='/public/images/svgs/swb-badge-blog.svg' alt='a small paper crane').logo-desktop
+                img(src='/public/images/svgs/swb-mobile-logo.svg' alt='a small paper crane').logo-mobile
+            nav
+              include ./includes/nav.pug
+        .hero-text-wrapper
+          span.hero-subtext A collection of projects & contracts
+          h1 Work
+          span.hero-subtext From large agencies to nonprofits
+    main
+      .wrapper
+        .intro-box
+          .intro-box-body I love #[strong long-term contracts]. They allow me to #[strong integrate] with talented teams, meet new people, and collaborate to create amazing digital experiences. I'm flexible, friendly, and love a good #[strong challenge].
+          .intro-box-featured.intro-box-featured--suitcase
+            img(src="./images/pngs/work-briefcase.png" alt='a briefcase')
+    .portfolio-short-outercontainer
+      .portfolio-short-container
+          .wrapper
+            .portfolio-short
+              .portfolio-short-body
+                span.portfolio-category Lead Instructor
+                h2 HackerYou
+                strong Snatch the pebble from my hand, grasshopper.
+                p Taking twenty-six students from fledgling students to battle-ready junior developers ready to take on their first professional roles in Toronto's tech vibrant community and beyond.
+                a(class="btn-outer hvr-rectangle-in" href="/case-studies/hackeryou/")
+                  .btn-inner Read On
+                picture.portfolio-short-mobile-image
+                  source(srcset="/images/pngs/work-item1-geometry-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+                  img(src="/images/pngs/work-item1-geometry.png" width="264px" alt='a geometric shape')
+              .portfolio-short-feature
+    .portfolio-short-outercontainer
+      .portfolio-short-container
+          .wrapper
+            .portfolio-short
+              .portfolio-short-feature
+              .portfolio-short-body
+                span.portfolio-category Agency Contract
+                h2 Jam3
+                strong Make cool shit- and don't fuck it up.
+                p Jam3 is one of the world's top digital and production design agencies. They specialize in creating highly advanced, experiential works in both the advertising and entertainment industry.
+                a(class="btn-outer hvr-rectangle-in" href="#")
+                  .btn-inner Read On
+                picture.portfolio-short-mobile-image
+                  source(srcset="/images/pngs/work-item2-geometry-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+                  img(src="/images/pngs/work-item2-geometry.png" width="264px" alt='a geometric shape')
+    .portfolio-short-outercontainer
+      .portfolio-short-container
+          .wrapper
+            .portfolio-short
+              .portfolio-short-body
+                span.portfolio-category A Digital Pilgrimage
+                h2 3 Months, 8 Countries
+                strong Travelling through South East Asia as a Digital Nomad
+                p In 2016, I took a three month sabbatical to deepen my skills as a Front End Developer. So why not do it while exploring the world?
+                a(class="btn-outer hvr-rectangle-in" href="/case-studies/digital-nomad/")
+                  .btn-inner Read On
+                picture.portfolio-short-mobile-image
+                  source(srcset="/images/pngs/work-item3-geometry-2x.png" media="(min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+                  img(src="/images/pngs/work-item3-geometry.png" width="264px" alt='a geometric shape')
+              .portfolio-short-feature
+    include ./includes/footer.pug

@@ -1,0 +1,71 @@
+include post-details.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Simon W. Bloom / About
+    include /includes/head.pug
+  body(class='case')
+    header.hero-container.hero-container--internal.hero-container--case
+      .hero.wrapper
+        .hero-nav-wrapper
+          .hero-content-wrapper
+            .logo
+              a(href="/")
+                img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+                img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
+            nav
+              include /includes/nav.pug
+        .hero-text-wrapper
+          span.hero-subtext Thailand, Vietnam, Singapore
+          h1 Digital Nomad
+          span.hero-subtext Malaysia, Japan, Hong Kong
+    main
+      .wrapper.case-wrapper
+        article.post-specs
+          .post-filed-under Filed Under:
+            .post-tags= postTags
+        .brief
+          .brief-column
+            h6 Location
+            span.brief-line
+            img(src="/images/pngs/currently-at.png")
+            p= agencyLocation
+          .brief-column
+            h6 Timeline
+            span.brief-line
+            p=timeline
+          .brief-column
+            h6 Fun facts
+            span.brief-line
+            p= funFacts
+        article.post
+          div.post-content.para-text
+            h1.post-title.article-content-wrap
+              span.brief-title= articleTitle
+            p.post-summary= articleCaption
+            section(data-section="Introduction")
+              p In 2015, I was approached by talent manager and all around awesome person Amanda Westerhout to join forces with the Jam3 team to collaborate on an exciting upcoming project. Specifically, they were looking for someone who was game to help deliver a clean, stylish, and performant single-page application to one of their blue-chip clients.
+              p Jam3 is the company that I’ve been most excited about collaborating with since I started working as a web developer. Their sites are conceptually compelling, rigorously designed, and technologically innovative. Needless to say, I jumped at this opportunity to flex my JavaScript muscles (JavaScript and flexing muscles - who thought those two words would ever be in the same sentence?)
+              p I spent two months in-office with Jam3 (my desk had a label with my name on it and everything!). Things that made my time with Jam3 amazing:
+              ul.diamonds
+                li Direct mentorship from web development wizard Darcy Clarke
+                li Building a single-page app powered by Facebook’s React framework
+                li Integrating the front end of our project on top of the WordPress VIP
+                li Platform Developing for multi-language support (including right to left languages like Arabic)
+                li Participating in daily scrums with an international team
+                li Leading the internal Alpha review for the front end of our project
+            section(data-section="Examples")
+              p Collaborating with a development/project team was awesome, and one of the main reasons I love working as a contractor. I learned to structure my code to adhere to my team’s rigorous style guide, to negotiate and plan responsive design for our site with the project’s lead designer and developer, and how to properly organize our project using git flow.
+            section(data-section="Finished Code") Finished Code
+              p For the tech-curious among you, here are a few of the awesome tools I got to use:
+              ul.diamonds.diamonds--no-line
+                li React
+                li Babel / ES6
+                li Webpack & Gulp
+                li JSX/Jade for Templating
+                li Stylus
+                li Git Flow for code reviews (and continuous development)
+              p As far as ‘levelling-up’ experiences go, my time with Jam3 definitely helped me step up my game as a web developer, and taught me the importance of releasing a bug-free, performant, and aesthetically beautiful project.
+    include /includes/footer.pug

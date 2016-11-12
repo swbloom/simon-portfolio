@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 html(lang="en")
-head
-  meta(charset="UTF-8")
-  title Simon W. Bloom / About
-  include ./includes/head.pug
-body(id="about")
-  header.hero-container.hero-container--internal.hero-container--about
-    .hero.wrapper
-      .hero-nav-wrapper
-        .hero-content-wrapper
-          .logo
-            img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
-            img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
-          nav
-            include ./includes/nav.pug
-      .hero-text-wrapper
-        span.hero-subtext From fine artist
-        h1 About Me
-        span.hero-subtext To web developer, speaker, & instructor
-  main
-    .wrapper.about-wrapper
-      div.text-wrapper
-        .headline-wrapper--about
-          h3 Hi! I'm Simon Bloom, a web-developer, instructor, and speaker.
-          p.quote I'm passionate about creating rigorous, beautiful websites with classic and simple designs. I love inspiring students as a lead instructor at Toronto based web bootcamp <a href="http://www.hackeryou.com/"/>HackerYou</a>. I'm available for public/private workshops and speaking opportunities. Nice to meet you!
-          .brief
-            .brief-column
-              h6 Currently At
-              span.brief-line
-              img(src="./images/pngs/currently-at.png")
-              p HackerYou
-            .brief-column
-              h6 Teaching
-              span.brief-line
-              ul
-                li JS Frameworks
-                li Advanced JavaScript
-                li HTML/CSS
-                li WordPress
-            .brief-column
-              h6 I'm Into
-              span.brief-line
-              ul
-                li Teaching
-                li Web Development
-                li Public Speaking
-                li (fantasy) Sports
-          .columns
-            .column I work as a lead instructor and developer at the Toronto based bootcamp HackerYou. Here I get to teach students about how awesome and exciting a career in web development can be - I offer guidance on everything from learning to code to interview skills.
-            .column When I'm not at HackerYou, you'll most likely find me travelling, working on a conference talk, preparing to teach at a workshop, or tinkering with my fantasy lineup.
-          .connect
-            h4 Feel free to e-mail me at connect@simonwbloom.com
-            p.subtext I'm currently considering speaking and workshop opportunities for 2017.
-      include ./includes/availability.pug
-  include ./includes/past-work.pug
-  include ./includes/footer.pug
+  head
+    meta(charset="UTF-8")
+    title Simon W. Bloom / About
+    include ./includes/head.pug
+  body(id="about")
+    header.hero-container.hero-container--internal.hero-container--about
+      .hero.wrapper
+        .hero-nav-wrapper
+          .hero-content-wrapper
+            .logo
+              a(href="/")
+                img(src='/public/images/svgs/swb-badge-blog.svg').logo-desktop
+                img(src='/public/images/svgs/swb-mobile-logo.svg').logo-mobile
+            nav
+              include ./includes/nav.pug
+        .hero-text-wrapper
+          span.hero-subtext From fine artist
+          h1 About Me
+          span.hero-subtext To web developer, speaker, & instructor
+    main
+      .wrapper.about-wrapper
+        div.text-wrapper
+          .headline-wrapper--about
+            h3 Hi! I'm Simon Bloom, a web-developer, instructor, and speaker.
+            p.quote I'm passionate about creating rigorous, beautiful websites with classic and simple designs. I love inspiring students as a lead instructor at Toronto based web bootcamp <a href="http://www.hackeryou.com/"/>HackerYou</a>. I'm available for public/private workshops and speaking opportunities. Nice to meet you!
+            .brief
+              .brief-column
+                h6 Currently At
+                span.brief-line
+                img(src="./images/pngs/currently-at.png" alt='HackerYou logo')
+                p HackerYou
+              .brief-column
+                h6 Teaching
+                span.brief-line
+                ul
+                  li JS Frameworks
+                  li Advanced JavaScript
+                  li HTML/CSS
+                  li WordPress
+              .brief-column
+                h6 I'm Into
+                span.brief-line
+                ul
+                  li Teaching
+                  li Web Development
+                  li Public Speaking
+                  li (fantasy) Sports
+            .columns
+              .column I work as a lead instructor and developer at the Toronto based bootcamp HackerYou. Here I get to teach students about how awesome and exciting a career in web development can be - I offer guidance on everything from learning to code to interview skills.
+              .column When I'm not at HackerYou, you'll most likely find me travelling, working on a conference talk, preparing to teach at a workshop, or tinkering with my fantasy lineup.
+            .connect
+              h4 Feel free to e-mail me at connect@simonwbloom.com
+              p.subtext I'm currently considering speaking and workshop opportunities for 2017.
+        include ./includes/availability.pug
+    include ./includes/past-work.pug
+    include ./includes/footer.pug

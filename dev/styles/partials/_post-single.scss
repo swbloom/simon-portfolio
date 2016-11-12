@@ -6,6 +6,10 @@ article.post {
     max-width: 622px;
     margin-left: auto;
     margin-right: auto;
+    a {
+      text-decoration: none;
+      color: #a8996e;
+    }
   }
 }
 
@@ -54,6 +58,9 @@ h1.article-title {
   letter-spacing: 2px;
   color: #4c5256;
   margin-bottom: 57px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1rem;
+  }
 }
 
 .post-title {
@@ -65,6 +72,10 @@ h1.article-title {
   text-transform: none;
   max-width: 622px;
   margin-bottom: 38px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+  }
 }
 
 .post-tags {
@@ -74,6 +85,9 @@ h1.article-title {
   font-size: 1.41rem;
   font-style: italic;
   color: #a8996e;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.3rem;
+  }
 }
 
 .post-summary {
@@ -83,6 +97,9 @@ h1.article-title {
   line-height: 1.5;
   color: #4a4a4a;
   margin-bottom: 38px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.4rem;
+  }
 }
 
 .dropcap {
@@ -91,10 +108,17 @@ h1.article-title {
   font-size: 80px;
   color: #a6d5e4;
   float: left;
-  line-height: 1.4;
-  padding-right: 10px;
-  padding-bottom: 6px;
+  line-height: 0.8;
+  padding-right: 20px;
+  padding-bottom: 5px;
   font-weight: 700;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 60px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    height: 39px;
+    width: 33px;
+  }
 }
 
 .first-para-text {
@@ -107,10 +131,16 @@ h1.article-title {
   font-size: 2.6rem;
   text-transform: none;
   letter-spacing: 0;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.66rem;
+  }
 }
 
 .post-content p {
   padding-bottom: 19px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 1.44rem;
+  }
 }
 
 .image-block {
@@ -210,31 +240,43 @@ h1.article-title {
   font-family: 'andale_mono';
   font-size: 17px;
   margin-top: 32px;
-  margin-bottom: 77px;
+  margin-bottom: 47px;
   padding-top: 74px;
   padding-bottom: 71px;
   color: #0b2d37;
-  &:before, &:after {
-    position: absolute;
-    width: 82px;
-    content: '';
-    background-color: #fbfbf9;
-    height: 100%;
-    top: 0;
-    display: block;
+  overflow: scroll;
+  margin-left: 90px;
+  margin-right: 40px;
+  padding-left: 76px;
+  padding-right: 76px;
+  // &:before, &:after {
+  //   position: absolute;
+  //   width: 82px;
+  //   content: '';
+  //   background-color: #fbfbf9;
+  //   height: 100%;
+  //   top: 0;
+  //   display: block;
+  // }
+  @media screen and (max-width: $screen-md) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 622px;
+    margin: 0 auto;
   }
-  &:before {
-    left: -82px;
-  }
-  &:after {
-    right: -82px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 14px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
-.hljs-keyword {
+.hljs-keyword, .hljs-name {
   color: #F6543E;
 }
 
-.hljs-params {
+.hljs-params, .hljs-string {
   color: #CDB461;
 }

@@ -109,6 +109,8 @@ h1.home-headline {
   .portfolio-short {
     @media screen and (max-width: $screen-md) {
       position: relative;
+      margin-left: 13px;
+      margin-right: 13px;
     }
   }
   .portfolio-short-feature {

@@ -50,6 +50,7 @@
   min-width: 520px;
   @media screen and (max-width: $screen-md) {
     padding-bottom: 87px;
+    padding-top: 140px;
   }
   @media screen and (max-width: $screen-xs) {
     padding-top: 47px;
@@ -90,5 +91,8 @@
     position: absolute;
     top: 50px;
     right: -190px;
+  }
+  @media screen and (max-width: $screen-md) {
+    overflow-x: hidden;
   }
 }

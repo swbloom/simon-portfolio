@@ -68,6 +68,7 @@ footer {
   left: 20px;
   background: url('../images/pngs/footer-sacred.png');
   @include image-2x("../images/pngs/footer-sacred-2x.png", 150px, 150px, false);
+  background-size: cover !important;
   animation-name: rotate;
   animation-duration: 120s;
   animation-iteration-count: infinite;
@@ -124,10 +125,12 @@ footer {
   font-size: 1.16rem;
   line-height: 2.5;
   color: #8da0a6;
-  position: absolute;
+  // position: absolute;
+  margin-top: 80px;
   bottom: 0;
   @media screen and (max-width: $screen-xs) {
     font-size: 1rem;
+    margin-top: 40px;
   }
 }
 
@@ -136,4 +139,13 @@ footer {
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+
+.social-links {
+  svg path {
+    transition: fill .3s ease;
+  }
+  svg:hover path {
+    fill: #a8996e;
+  }
 }
